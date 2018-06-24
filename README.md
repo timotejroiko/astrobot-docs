@@ -25,7 +25,7 @@ Astrobot requires the following permissions:
 This user guide can be accessed inside Discord by using the help command. To navigate the guide simply click on the emoji buttons that will appear or specify a page number to open it directly. If you dont see anything, you need to enable Link Previews in your Discord settings.
 
 ```
-.help
+.help (open this user guide)
 .help 4 (directly opens page 4)
 ```
 
@@ -34,8 +34,7 @@ This user guide can be accessed inside Discord by using the help command. To nav
 .newchart MM/DD/YYYY, HH:MM, city country
 ```
 
-You must use full year. Both 24h and 12h time formats are supported.
-Location and Timezones are calculated using Google's Geocoding and Timezone APIs.
+Both 24h and 12h time formats are supported and the full year must be used. Location and Timezones are calculated using Google's Geocoding and Timezone APIs.
 
 Examples:
 ```
@@ -45,12 +44,12 @@ Examples:
 .newchart 11/18/-35, 8:30:10am, lisbon portugal (BC dates)
 ```
 
-If your birth time is unknown, standard practice is to use 12:00, but you should not attempt to read houses as they are highly dependant on the time of birth.
+If your birth time is unknown, standard practice is to use 12:00, but you should not attempt to read houses as they are highly dependant on time of birth.
 
 
 ### Current Transit Chart
 
-To get the current transits, use the keyword "now". Default location is London UK. Optionally you can specify a custom location.
+To get the current transits, use the keyword "now". Default location is London UK. Optionally you can specify a custom location by using a comma.
 
 Examples:
 ```
@@ -82,7 +81,7 @@ Opens a snapshot of the saved chart exactly the way it was. It is not affected b
 ```
 .newchart name
 ```
-Rebuilds the chart from saved information. It uses your current settings and also supports extended options. Extended options from saved charts are removed in favor of new ones or returned to default.
+Rebuilds the chart from saved information. It uses your current settings and also supports extended options. Extended options from saved charts are removed in favor of new ones or returned to default, meaning if you saved a chart using an extended option, you need to use the extended option again when opening with `.newchart` or it will be rebuilt with default options.
 
 ### Listing and Finding Charts
 ```
@@ -106,7 +105,7 @@ Charts are color coded and organized in brackets depending if they are protected
 .biwheel chart1 + chart2
 ```
 
-Biwheels work the same way as the .newchart command. You can use full birth information, the 'now' keyword, or saved charts. Biwheels also support extended options and can also be saved, but can only be opened by .openchart
+Biwheels work the same way as the `.newchart` command. You can use full birth information, the 'now' keyword, or saved charts. Biwheels also support extended options and can also be saved, but can only be opened by `.openchart`.
 
 Examples:
 ```
@@ -150,7 +149,7 @@ Examples (in DMs):
 
 ## Extended Options
 
-Extended options can be used at the end of a command for extra functionality. Multiple options can be used at once. For biwheels, --format and --size should only be used at the end of the entire command.
+Extended options can be used at the end of a command for extra functionality. Multiple options can be used at once. For biwheels, `--format` and `--size` should only be used at the end of the entire command.
 
 ### Formatting
 ```
@@ -237,7 +236,7 @@ Examples:
 --progression
 ```
 
-Creates a Progressed Chart using the Secondary Progression method (1 year = 1 day). Currently can only be used with saved charts. To specify a progressed date, use only MM/DD/YYYY, no need for time or location. Secondary Progressions should primarily be used together with natal charts in a biwheel.
+Creates a Progressed Chart using the Secondary Progression method (1 year = 1 day) with angles progressed by solar arc. Currently can only be used with saved charts. To specify a progressed date, use only MM/DD/YYYY, no need for time or location. Secondary Progressions should primarily be used together with natal charts in a biwheel.
 
 Examples:
 ```
@@ -278,33 +277,22 @@ ask me anything @Astrobot (random question)
 
 Our sponsor server, which is also our support server, can be found [here](https://discord.gg/jtaCURK)
 
-
--
-Help Astrobot - All Donations are Appreciated
-Paypal: paypal.me/timotejroiko
-BTC: 3AwSvBXV6cXy5tTadopZetTGB4StNXbYYj
-LTC: MEe1ymrHgSWusPyPp6nxYNNGTs5X7Mo82v
-ETH: 0x8bAe3a23d11592a656d983c4a3eDC4DC1C15E1EA
-
-Users who donate above 5$ get to request a custom color theme!
-(if you donated send a dm to Tim#2373)
-Thank you for your preference. Astrobot loves you!
-
-
 ## Credits
 
-Astrobot was made by Timotej Valentin Rojko (Tim#2373) using Node.js, Discord.js, Google's geocoding and timezone API's and astro.com's Swiss Ephemeris.
+Astrobot was made by Timotej Valentin Rojko (Tim#2373) using Discord.js, Google's geocoding and timezone API's and astro.com's Swiss Ephemeris.
 
-This project is currently closed source as its code is in the process of being implemented in our future astrology website: astrologico.org
+This project is currently closed source as its code is in the process of being implemented in our future astrology website: [astrologico.org](https://astrologico.org)
 
 ## Donate
 
 All donations are going towards our website's construction, which will feature an interactive online version of Astrobot!
 
+```
 Paypal: paypal.me/timotejroiko
 BTC: 3AwSvBXV6cXy5tTadopZetTGB4StNXbYYj
 LTC: MEe1ymrHgSWusPyPp6nxYNNGTs5X7Mo82v
 ETH: 0x8bAe3a23d11592a656d983c4a3eDC4DC1C15E1EA
+```
 
 Users who donate above 5$ get to request a custom color theme!
 (if you donated send a dm to Tim#2373)
