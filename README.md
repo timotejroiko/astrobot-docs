@@ -279,7 +279,7 @@ Our sponsor server, which is also our support server, can be found [here](https:
 
 ## Credits
 
-Astrobot was made by Timotej Valentin Rojko (Tim#2373) using Discord.js, Google's geocoding and timezone API's and astro.com's Swiss Ephemeris.
+Astrobot is being developed and maintained by Timotej Valentin Rojko (Tim#2373) using Discord.js, Google's geocoding and timezone API's and astro.com's Swiss Ephemeris.
 
 This project is currently closed source as its code is in the process of being implemented in our future astrology website: [astrologico.org](https://astrologico.org)
 
