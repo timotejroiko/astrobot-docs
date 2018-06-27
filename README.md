@@ -4,6 +4,8 @@ A fully featured Astrology software for Discord!
 
 This repo is currently being used as a user guide and for feedback and bug tracking purposes only.
 
+[![Discord Bots](https://discordbots.org/api/widget/344272098488877057.svg)](https://discordbots.org/bot/344272098488877057)
+
 ## Getting Started
 
 To add Astrobot to your Discord server, click [here](https://discordapp.com/oauth2/authorize?=&client_id=344272098488877057&permissions=116800&scope=bot)
