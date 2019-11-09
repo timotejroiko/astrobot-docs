@@ -281,13 +281,11 @@ Our sponsor server, which is also our support server, can be found [here](https:
 
 ## Credits
 
-Astrobot is being developed and maintained by Timotej Valentin Rojko (Tim#2373) using Discord.js, Google's geocoding and timezone API's and astro.com's Swiss Ephemeris.
-
-This project is currently closed source as its code is in the process of being implemented in our future astrology website: [astrologico.org](https://astrologico.org)
+Astrobot is being developed and maintained by Tim#2373
 
 ## Donate
 
-All donations are going towards our website's construction, which will feature an interactive online version of Astrobot!
+All donations are going towards our website's construction, which will feature a fully interactive online astrology software.
 
 ```
 Paypal: paypal.me/timotejroiko
