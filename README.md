@@ -7,7 +7,7 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 * Geocentric, Topocentric and Heliocentric
 * 20+ House Systems and 40+ Ayanamsas
 * Extremely customizable
-* Custom themes and custom orb sets (for patreons)
+* Custom themes and custom orb sets (premium)
 
 [![top.gg widget](https://top.gg/api/widget/344272098488877057.svg)](https://top.gg/bot/344272098488877057)
 
@@ -19,8 +19,8 @@ If you need any help join our support server -> [Join Astro Dev](https://discord
 
 ## Basic Commands
 
-[Prefix](#prefix)
-[Help](#help)
+* **[Prefix](#prefix)**
+* **[Help](#help)**
 
 Astrobot can be quite complex to use at first, but once you get the hang of it its quite easy!
 
@@ -68,12 +68,12 @@ Multiple people can use the same help menu at the same time, but if clicking on 
 
 ## Charting Commands
 
-[Newchart](#newchart)
-[Savechart](#savechart)
-[Editchart](#editchart)
-[Deletechart](#deletechart)
-[Findchart](#findchart)
-[Mycharts](#mycharts)
+* **[Newchart](#newchart)**
+* **[Savechart](#savechart)**
+* **[Editchart](#editchart)**
+* **[Deletechart](#deletechart)**
+* **[Findchart](#findchart)**
+* **[Mycharts](#mycharts)**
 
 These commands are used to create a variety of charts and are the core feature of Astrobot
 
