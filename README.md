@@ -24,13 +24,13 @@ If you need any help join our support server -> [Join Astro Dev](https://discord
 
 Astrobot can be quite complex to use at first, but once you get the hang of it its quite easy!
 
-Astrobot's default prefix is `.` and it works both in servers as well as in DMs. You can also customize Astrobot's prefix in your server with the prefix command explained below.
+Astrobot's default prefix is `.` and it works in servers and DMs. You can also customize Astrobot's prefix in your server with the prefix command explained below.
 
 So lets get started with Astrobot's basic commands:
 
 ### Prefix
 
-Use this command to view and/or change Astrobot's prefix in your server. Only guild owners can change the guild prefix, and this command cannot be used in DMs.
+Use this command to view and/or change Astrobot's prefix in your server. Only server owners can change the prefix, and this command cannot be used in DMs.
 
 Examples:
 
@@ -48,11 +48,11 @@ Kicking Astrobot from your server also resets its prefix.
 
 ### Help
 
-The help command contains almost everything on this page in an acessible way. It divides the content in sections and pages that can be easily navigated by clicking on the emoji reactions that show up.
+The help command opens an interactive menu that includes almost everything on this page in an acessible way. It divides the content in sections and pages that can be easily navigated by clicking on the emoji reactions that show up.
 
 Examples:
 
-* `.help` - shows the help menu and displays available options
+* `.help` - shows the interactive help menu and displays available options
 * `click on the (1) emoji` - enters the first section and displays the options for that section
 * `click on the (1) emoji again` - enters the first subsection of the first section and displays the options for it
 * `click on the (<-) emoji` - goes back to the previous section
@@ -62,9 +62,9 @@ Examples:
 
 And so on (easier to see it on discord than to explain it here)
 
-The help command always works regardless of how old it gets, you can safely open a permanent help menu in a read-only channel and send your users there instead of using it again and again.
+The interative menu always works regardless of how old it gets, you can safely open a permanent help menu in a read-only channel and send your users there so they dont need to use it again and again.
 
-Multiple people can use the same help menu at the same time, but if clicking on the buttons too fast some clicks will ignored to prevent overload, so avoid fighting with each other over which page to display :3
+Multiple people can use the same help menu at the same time, but if you click on the reactions too fast some clicks will be ignored to prevent overload, so avoid fighting with each other over which page to display :3
 
 ## Charting Commands
 
@@ -75,7 +75,7 @@ Multiple people can use the same help menu at the same time, but if clicking on 
 * **[Findchart](#findchart)**
 * **[Mycharts](#mycharts)**
 
-These commands are used to create a variety of charts and are the core feature of Astrobot
+These commands are used to create a variety of charts and are the core feature of Astrobot.
 
 ### Newchart
 
@@ -104,7 +104,7 @@ PS: You can also edit your commands, and Astrobot will edit its response accordi
 
 #### Biwheels
 
-Now lets say we want to create a biwheel, all you have to do is add a ` + ` at the end of the command, and give it a new set of data the same way as above:
+Now lets say we want to create a biwheel, all you have to do is add a ` + ` at the end of the command (with spaces around it), and give it a new set of data the same way as above:
 
 * `.newchart 10/20/1995, 15:30, madrid spain + 5/15/1992, 6:45am, london uk`
 
@@ -118,13 +118,13 @@ Besides the above Date, Time and Location method, you can also use the keyword `
 * `.newchart now, madrid spain`
 * `.newchart 10/20/1995, 15:30, madrid spain + now, madrid spain`
 
-This makes it easy to check the current transits, both in a single chart of in a biwheel with another chart. The `now` keyword can also be modified by adding or removing a number of days from it:
+This makes it easy to check the current transits, both in a single chart and in a biwheel with another chart. The `now` keyword can also be modified by adding or removing a number of days from it:
 
 * `.newchart now+1` - tomorrow
 * `.newchart now-1` - yesterday
 * `.newchart now+0.5` - 12 hours from now
 
-Note that there should be no spaces around the plus sign in this case.
+Note that there should be no spaces around the plus/minus signs in this case.
 
 #### Saved Charts
 
@@ -157,12 +157,16 @@ This option lets you specify which zodiac should be used. When used on biwheels,
 * `.newchart now --zodiac=D1` - use the draconic (true node) zodiac
 * `.newchart jack --zodiac=S1 + now --zodiac=S1` - use the fagan/bradley sidereal zodiac in both charts
 
+Check the available zodiacs and ayanamsas in the [Zodiacs](#zodiacs) section.
+
 ##### --houses
 
 This option lets you specify which house system should be used. When used on biwheels, this option affects each chart independently. For example:
 
 * `.newchart now --houses=13` - use the koch house system
 * `.newchart jack --houses=24 + now --houses=24` - use the whole signs house system for both charts
+
+Check the available house systems in the [Houses](#houses) section.
 
 ##### --timezone
 
@@ -183,9 +187,9 @@ This option lets you create solar return charts by specifying a year and optiona
 
 This option lets you create a return chart for any planet, not only the sun, by specifying a planet ID, a date and a search direction. Available search directions are `current`, `next` and `closest`. When used on biwheels, this option affects each chart independently. For example:
 
-* `.newchart john --return2=p1, next, now` - john's next lunar return starting from the current date and time
-* `.newchart jack --return2=p2, closest, 5/5/2025 lisbon portugal` - jack's mercury return closest to 5/5/2025 in lisbon portugal
-* `.newchart john --return2=p5, current, now + jack --return2=p5, current, now` - biwheel john's most recent jupiter return with jacks most recent jupiter return
+* `.newchart john --return2=P1, next, now` - john's next lunar return starting from the current date and time
+* `.newchart jack --return2=P2, closest, 5/5/2025 lisbon portugal` - jack's mercury return closest to 5/5/2025 in lisbon portugal
+* `.newchart john --return2=P5, current, now + jack --return2=P5, current, now` - biwheel john's most recent jupiter return with jacks most recent jupiter return
 
 ##### --progression
 
@@ -198,8 +202,8 @@ This option lets you create a progressed chart using the secondary progressions 
 
 This option lets you create a "persona" chart for a specific planet. When used on biwheels, this option affects each chart independently. For example:
 
-* `.newchart john --persona=p5` - john's jupiter persona chart
-* `.newchart john --persona=p5 + john --persona=p6` - john's jupiter persona chart biwheeled with john's saturn persona chart
+* `.newchart john --persona=P5` - john's jupiter persona chart
+* `.newchart john --persona=P5 + john --persona=P6` - john's jupiter persona chart biwheeled with john's saturn persona chart
 
 ##### --design
 
@@ -224,28 +228,34 @@ This option lets you change the resolution of the resulting chart image as well 
 
 ##### --theme
 
-This option lets you change the chart's color theme. There are three built-in themes: `classic`, `elements` and `rainbow`. Additionally, custom themes can be created as a premium feature. For example:
+This option lets you change the chart's color theme. There are three built-in themes: `classic`, `elements` and `rainbow`. For example:
 
 * `.newchart now --theme=classic` - use the classic theme for this chart
 
+Additionally, custom themes can be created as a premium feature, check the [Premium](#premium) section.
+
 ##### --orbs
 
-This option lets you change the chart's orb values. There are three built-in orbs: `astrobot`, `astro.com` and `strict`. Additionally, custom orbs can be created as a premium feature.
+This option lets you change the chart's orb values. There are three built-in orbs: `astrobot`, `astro.com` and `strict`. For example:
 
 * `.newchart now --orbs=strict`
 
+Additionally, custom orbs can be created as a premium feature, check the [Premium](#premium) section
+
 ##### --aspects
 
-This option lets you define which aspects should be enabled in the chart. A full list of supported aspects can be found in the [Aspects](#aspects) section. For example:
+This option lets you define which aspects should be enabled in the chart. For example:
 
 * `.newchart now --aspects=trine,sextile,square` - show only trines, sextiles and squares
+
+A full list of supported aspects can be found in the [Aspects](#aspects) section.
 
 ##### --disable & --enable
 
 This option lets you disable or re-enable a planet's aspect points. For example:
 
-* `.newchart now --disable=p0,p1,p2` - disable aspects for the sun, moon and mercury
-* `.newchart jack + now --enable=a1` - re-enable aspects to Ceres if disabled
+* `.newchart now --disable=P0,P1,P2` - disable aspects for the sun, moon and mercury
+* `.newchart jack + now --enable=A1` - re-enable aspects to Ceres if disabled
 
 ##### --composite
 
@@ -255,11 +265,13 @@ This option lets you turn a biwheel into a composite chart using the midpoint co
 
 ##### --preset
 
-This option lets you load a set of options from a preset. There are two built-in presets: `default` and `original`. You can also create your own presets, check the [Presets](#presets) section. When using biwheels, this option can be set separately for both charts. For example:
+This option lets you load a set of options from a preset. There are two built-in presets: `default` and `original`. When using biwheels, this option can be set separately for both charts. For example:
 
 * `.newchart jack --preset=default` - show this chart using the default settings
 * `.newchart jack --preset=original` - show this chart using the same settings the chart was saved with
 * `.newchart jack --preset=myPreset` - show this chart using a custom preset
+
+You can also create your own presets, check the [Presets](#presets) section.
 
 ##### --chartinfo
 
@@ -269,10 +281,153 @@ This option lets you view more details about the chart or charts. When viewing o
 
 ### Savechart
 
+This command lets you save the last chart you created under a name of your choice. All names are case sensitive and must not include commas, double dashes nor slashes and mentions will be converted to Discord IDs For example:
+
+* `.savechart mychart` - save the last chart you created under the name `mychart`
+
+#### Savechart Options
+
+A chart can be saved as public or private, and also be shared with specific people, check out the following options:
+
+##### --private & --share
+
+Save this chart as a private chart. Private charts can only be opened by their owners and the people the chart was shared with. For example:
+
+* `.savechart mychart --private` - save this chart as private
+* `.savechart mychart --private --share=@myfriend` - save this chart as private and share it with a specific person
+
+##### --replace
+
+If you already have a saved chart with a given name and you want to replace it, you can use this option to overwrite it:
+
+* `.savechart myexistingchart --replace` - replace your previous chart with a new one
+
 ### Editchart
+
+This command lets you view information about one of your saved charts as well as change its name and privacy settings. For example:
+
+* `.editchart chartname` - view information about your chart
+
+##### --rename
+
+Change the name of your saved chart:
+
+* `.editchart mychart --rename=mychart2` - change your chart's name to `mychart2`
+
+##### --private
+
+Toggle your chart's privacy:
+
+* `.editchart mychart --private` - toggle this chart's privacy setting
+
+##### --share
+
+If this chart is private, change who can use it:
+
+* `.editchart mychart --share=@myfriend` - share or unshare this chart with a friend
+* `.editchart mychart --share=none` - unshare this chart with everyone
 
 ### Deletechart
 
+This command lets you permanently delete a chart. You can only delete charts you own. For example:
+
+* `.deletechart mychart` - permanently delete `mychart`
+
 ### Findchart
 
+This command lets you find a saved chart by name. If you find too many results, try searching for a more specific term. For example:
+
+* `.findchart john` - show all charts containing `john` in their names
+
 ### Mycharts
+
+This command lets you see all charts you have saved with your current discord account. For example:
+
+* `.mycharts` - show all the charts you own
+
+## Utility Commands
+
+* **[Findobject](#findobject)**
+* **[Objectinfo](#objectinfo)**
+* **[about](#about)**
+* **[Settings](#settings)**
+* **[Prefix](#prefix)**
+
+The following utility commands provide assistance with many things for example finding object IDs by name, changing personal settings and more.
+
+### Findobject
+
+This command lets you search for objects by name and discover their ID. If you cant find the object you're looking for, try a more specific search term as well as any alternative names it may have. For example:
+
+* `.findobject eris` - show all planets, stars and objects whose names contain `eris`
+
+##### --type
+
+Limit the search results to specific types. For example:
+
+* `.findobject eris --type=A` - show only asteroids whose name contains `eris`
+
+More information about types can be found in the [Planets](#planets) section.
+
+### Objectinfo
+
+This command shows you information about a specific object ID, its names, type and a preview of how it appears in a chart. For example:
+
+* `.objectinfo P5` - show information about object P5 (jupiter)
+
+More information about common object IDs check the [Planets](#planets) section
+
+### About
+
+This command lets you obtain information about certain topics and components used by Astrobot such as glyphs, orbs, aspects and more.
+
+* `.about` - list components that offer additional information
+
+#### About Glyphs
+
+This option creates an image showing a preview and a description of every glyph and symbol that Astrobot uses:
+
+* `.about glyphs` - display all glyphs
+
+#### About Aspects
+
+This option creates an image showing a preview of every aspect supported by Astrobot:
+
+* `.about aspects` - display all aspects
+
+#### About orbs
+
+This option displays a list of available orb sets, as well as orb details about a specific set:
+
+* `.about orbs` - display a list of available orb sets
+* `.about orbs astro.com` - describe the orb values of the `astro.com` orbs set
+
+#### About Houses
+
+This option displays a list of available house systems:
+
+* `.about houses` - display a list of available house systems
+
+Or check the list of house systems in the [Houses](#houses) section.
+
+#### About Zodiacs
+
+This option displays a list of available zodiacs and ayanamsas:
+
+* `.about zodiacs` - display a list of available zodiacs
+
+Or check the list of zodiacs and ayanamsas in the [Zodiacs](#zodiacs) section.
+
+### About Planets
+
+This option diplays a list of commonly used planets and their IDs:
+
+* `.about planets` - display a list of common planets
+
+Or check the list of planets in the [Planets](#planets) section.
+
+### Settings
+
+### Prefix
+
+See [Prefix](#prefix)
