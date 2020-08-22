@@ -1,4 +1,6 @@
-﻿# Astrobot
+﻿[![top.gg widget](https://top.gg/api/widget/344272098488877057.svg)](https://top.gg/bot/344272098488877057)
+
+# Astrobot
 
 A fully featured Astrology software for Discord! Astrobot can create a variety of astrological charts and supports a vast array of possibilities. Its features include:
 
@@ -6,16 +8,11 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 * Tropical and Sidereal zodiacs
 * Geocentric, Topocentric and Heliocentric
 * 20+ House Systems and 40+ Ayanamsas
+* Biwheels and composites
 * Extremely customizable
 * Custom themes and custom orb sets (premium)
 
-[![top.gg widget](https://top.gg/api/widget/344272098488877057.svg)](https://top.gg/bot/344272098488877057)
-
-## Getting Started
-
-To add Astrobot to your Discord server click here -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)
-
-If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)
+![preview](preview.png)
 
 ## Index
 
@@ -37,6 +34,13 @@ If you need any help join our support server -> [Join Astro Dev](https://discord
 	* **[Prefix](#prefix)**
 * **[Additional Information](#additional-information)**
 	* **[Planets](#planets)**
+* **[Donations and Premium Features](#donations-and-premium-features)**
+
+## Getting Started
+
+To add Astrobot to your Discord server click here -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)
+
+If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)
 
 Astrobot can be quite complex to use at first, but once you get the hang of it its quite easy!
 
