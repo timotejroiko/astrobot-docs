@@ -17,20 +17,36 @@ To add Astrobot to your Discord server click here -> [Invite Astrobot](https://d
 
 If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)
 
-## Basic Commands
+## Index
 
 * **[Prefix](#prefix)**
 * **[Help](#help)**
+* **[Charting Commands](#charting-commands)**
+	* **[Newchart](#newchart)**
+	* **[Openchart](#openchart)**
+	* **[Savechart](#savechart)**
+	* **[Editchart](#editchart)**
+	* **[Deletechart](#deletechart)**
+	* **[Findchart](#findchart)**
+	* **[Mycharts](#mycharts)**
+* **[Utility Commands](#utility-commands)**
+	* **[Findobject](#findobject)**
+	* **[Objectinfo](#objectinfo)**
+	* **[About](#about)**
+	* **[Settings](#settings)**
+	* **[Prefix](#prefix)**
+* **[Additional Information](#additional-information)**
+	* **[Planets](#planets)**
 
 Astrobot can be quite complex to use at first, but once you get the hang of it its quite easy!
 
-Astrobot's default prefix is `.` and it works in servers and DMs. You can also customize Astrobot's prefix in your server with the prefix command explained below.
+Astrobot's default prefix is `.` and it works in servers as well as DMs. You can also customize Astrobot's prefix in your server with the prefix command explained below.
 
 So lets get started with Astrobot's basic commands:
 
 ### Prefix
 
-Use this command to view and/or change Astrobot's prefix in your server. Only server owners can change the prefix, and this command cannot be used in DMs.
+Use this command to view and/or change Astrobot's prefix in your server. Only server owners can change the prefix and it cannot be used in DMs.
 
 Examples:
 
@@ -62,18 +78,11 @@ Examples:
 
 And so on (easier to see it on discord than to explain it here)
 
-The interative menu always works regardless of how old it gets, you can safely open a permanent help menu in a read-only channel and send your users there so they dont need to use it again and again.
+The interactive menu always works regardless of how old it gets so you can safely open a permanent help menu in a read-only channel and send your users there so they dont need to use it again and again.
 
-Multiple people can use the same help menu at the same time, but if you click on the reactions too fast some clicks will be ignored to prevent overload, so avoid fighting with each other over which page to display :3
+Multiple people can use the same help menu at the same time, but if you click on the reactions too fast some clicks will be ignored to prevent overload, so avoid fighting with each other over which page to display.
 
 ## Charting Commands
-
-* **[Newchart](#newchart)**
-* **[Savechart](#savechart)**
-* **[Editchart](#editchart)**
-* **[Deletechart](#deletechart)**
-* **[Findchart](#findchart)**
-* **[Mycharts](#mycharts)**
 
 These commands are used to create a variety of charts and are the core feature of Astrobot.
 
@@ -143,12 +152,13 @@ Additionally, there are multiple chart options that can be added to the Newchart
 
 ##### --add & --remove
 
-These two options let you add and/or remove planets and objects from a chart. When used on biwheels, this option affects each chart independently. For example:
+These two options let you add and/or remove planets and objects from a chart. When used on biwheels, this option affects each chart independently. Additionally, the `--remove` option includes an `ALL` keyword to remove all planets. For example:
 
 * `.newchart now --add=A1,A2 --remove=A2060` - remove Chiron and add Ceres and Pallas
 * `.newchart jack --add=A1 + now --add=A1` - add Ceres to both charts
+* `.newchart now --remove=ALL --add=P0,P1` - remove everything exept Sun and Moon
 
-To find out which planets and objects are available and how to get them check out the [Planets](#planets) section.
+Because of the sheer amount of planets and objects that Astrobot supports, it makes use of an ID system to identify them. To find out which planets and objects are available and how to find them and their respective IDs, check out the [Planets](#planets) section.
 
 ##### --zodiac
 
@@ -252,10 +262,11 @@ A full list of supported aspects can be found in the [Aspects](#aspects) section
 
 ##### --disable & --enable
 
-This option lets you disable or re-enable a planet's aspect points. For example:
+These options let you disable or re-enable a planet's aspect points. Additionally, they include an `ALL` keyword for selecting all planets. For example:
 
 * `.newchart now --disable=P0,P1,P2` - disable aspects for the sun, moon and mercury
 * `.newchart jack + now --enable=A1` - re-enable aspects to Ceres if disabled
+* `.newchart john --disable=ALL --enable=P0,P1` - disable aspects for all planets except Sun and Moon
 
 ##### --composite
 
@@ -270,14 +281,21 @@ This option lets you load a set of options from a preset. There are two built-in
 * `.newchart jack --preset=default` - show this chart using the default settings
 * `.newchart jack --preset=original` - show this chart using the same settings the chart was saved with
 * `.newchart jack --preset=myPreset` - show this chart using a custom preset
+* `.newchart jill --preset=myPreset + jack --preset=original` - show jill's chart with a custom preset in a biwheel with jack's chart in its original state
 
-You can also create your own presets, check the [Presets](#presets) section.
+Check out the [Presets](#presets) section to learn how to create and manage your custom presets.
 
 ##### --chartinfo
 
 This option lets you view more details about the chart or charts. When viewing other people's charts, any personal information will be redacted. For example
 
 `.newchart john --chartinfo` - view more information about john's chart
+
+### Openchart
+
+This command loads a saved chart in its original state, exactly as it was when it was saved. It is essentially a shortcut for `--preset=original` but it can only open saved charts and doesnt support additional options. For example:
+
+* `.openchart daniel` - show daniel's chart in its original state
 
 ### Savechart
 
@@ -346,12 +364,6 @@ This command lets you see all charts you have saved with your current discord ac
 * `.mycharts` - show all the charts you own
 
 ## Utility Commands
-
-* **[Findobject](#findobject)**
-* **[Objectinfo](#objectinfo)**
-* **[about](#about)**
-* **[Settings](#settings)**
-* **[Prefix](#prefix)**
 
 The following utility commands provide assistance with many things for example finding object IDs by name, changing personal settings and more.
 
@@ -428,6 +440,99 @@ Or check the list of planets in the [Planets](#planets) section.
 
 ### Settings
 
+This command lets you configure your preferred default settings for all your charts. These settings are applied to all new charts as well as saved charts unless overriden by chart options or when using the `.openchart` command. Settings are also divided into sections for easier management.
+
+#### Settings Sections
+
+The following sections are available to display your current settings. Each section also includes instructions for how to edit it.
+
+* `.settings planets` - display your currently enabled planets as well as their aspect points settings
+* `.settings aspects` - display your currently enabled aspects
+* `.settings houses` - display your current preferred house system as well as available house systems to chose from
+* `.settings zodiac` - display your current preferred zodiac as well as available zodiacs to chose from
+* `.settings themes` - display your current chart theme as well as available themes to chose from
+* `.settings orbs` - display your current orbs set as well as available sets to chose from
+* `.settings dateformat` - display your current preferred date format
+* `.settings coordinates` - display your current preferred coordinate system
+* `.settings presets` - display your saved presets
+
+#### Settings Options
+
+The following options are available to change your personal settings.
+
+##### --addplanets & --removeplanets
+
+Add and remove planets from your settings. For example:
+
+* `.settings --addplanets=A1,A2,A3` - add Ceres, Pallas and Juno to your settings
+* `.settings --removeplanets=P7,P8,P9` - remove Uranus, Neptune and Pluto from your settings
+
+##### --enableplanets & --disableplanets
+
+Disable and re-enable aspects points for your selected planets. All planets have their aspect points enabled by default. For example:
+
+* `.settings --disableplanets=A1,A2,A3` - disable aspect points to Ceres, Pallas and Juno
+* `.settings --enableplanets=A1,A2,A3` - re-enable previously disabled aspect points
+
+##### --enableaspects & --disableaspects
+
+Enable and disable your preferred aspects. For example:
+
+* `.settings --enableaspects=conjunction,quincunx` - enable conjunctions and quincunxes
+* `.settings --disableaspects=sextile,opposition` - disable sextiles and oppositions
+
+##### --houses
+
+Set your preferred house system. For example:
+
+* `.settings --houses=24` - set Whole Signs as your default house system
+
+##### --zodiac
+
+Set your preferred zodiac. For example:
+
+* `.settings --zodiac=S2` - set Lahiri as your default zodiac
+
+##### --theme
+
+Set your preferred chart theme. For example:
+
+* `.settings --theme=rainbow` - set rainbow as your default theme
+
+##### --orbs
+
+Set your preferred orbs set
+
+* `.settings --orbs=strict` - set your default orbs to strict
+
+##### --switchdateformat
+
+Switch your preferred date format between **DD/MM/YYYY** and **MM/DD/YYYY**. For example:
+
+* `.settings --switchdateformat` - switch to another date format
+
+##### --coordinates
+
+Set your preferred coordinates system. For example:
+
+* `.settings --coordinates=HELIOCENTRIC` - set Heliocentric as your default coordinates system
+
+##### --savepreset & --loadpreset & --deletepreset
+
+Manage your saved presets. Additionally a built-in `default` preset is available to reset all settings back to default. For example:
+
+* `.settings --savepreset=custom1` - save all your current settings as a preset named custom1
+* `.settings --loadpreset=custom1` - replace all your current settings with those contained in the custom1 preset
+* `.settings --deletepreset=custom1` - delete the custom1 preset
+* `.settings --loadpreset=default` - reset all settings back to default
+
 ### Prefix
 
 See [Prefix](#prefix)
+
+
+## Additional Information
+
+Here you can see additional information about Astrobot including how its planet ID system works, all available house systems, zodiacs, aspects and more.
+
+### Planets
