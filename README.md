@@ -1,16 +1,20 @@
-﻿[![top.gg widget](https://top.gg/api/widget/344272098488877057.svg)](https://top.gg/bot/344272098488877057)
-
-# Astrobot
+﻿# Astrobot
 
 A fully featured Astrology software for Discord! Astrobot can create a variety of astrological charts and supports a vast array of possibilities. Its features include:
 
 * Planets, Stars, Asteroids, Arabic Parts, Comets, Artificial Sattelites, and more
-* Tropical and Sidereal zodiacs
+* Tropical, Sidereal and Draconic zodiacs
 * Geocentric, Topocentric and Heliocentric
 * 20+ House Systems and 40+ Ayanamsas
 * Biwheels and composites
+* Returns, Personas, Progressions and more
+* Chart management and unlimited saved charts
+* Custom themes and custom orb sets
 * Extremely customizable
-* Custom themes and custom orb sets (premium)
+
+To add Astrobot to your Discord server click here -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)
+
+If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)
 
 ![preview](preview.png)
 
@@ -34,13 +38,12 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 	* **[Prefix](#prefix)**
 * **[Additional Information](#additional-information)**
 	* **[Planets](#planets)**
-* **[Donations and Premium Features](#donations-and-premium-features)**
+	* **[Houses](#houses)**
+	* **[Zodiacs](#zodiacs)**
+	* **[Aspects](#aspects)**
+* **[Donations and Premium Features](#premium)**
 
 ## Getting Started
-
-To add Astrobot to your Discord server click here -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)
-
-If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)
 
 Astrobot can be quite complex to use at first, but once you get the hang of it its quite easy!
 
@@ -50,7 +53,7 @@ So lets get started with Astrobot's basic commands:
 
 ### Prefix
 
-Use this command to view and/or change Astrobot's prefix in your server. Only server owners can change the prefix and it cannot be used in DMs.
+Use this command to view and/or change Astrobot's prefix in your server. Only server owners can change the prefix.
 
 Examples:
 
@@ -68,21 +71,21 @@ Kicking Astrobot from your server also resets its prefix.
 
 ### Help
 
-The help command opens an interactive menu that includes almost everything on this page in an acessible way. It divides the content in sections and pages that can be easily navigated by clicking on the emoji reactions that show up.
+The help command opens an interactive menu that includes almost everything on this page in an acessible way. It divides the content in sections and pages that can be easily navigated by clicking on the emoji reactions that show up at the bottom.
 
 Examples:
 
 * `.help` - shows the interactive help menu and displays available options
-* `click on the (1) emoji` - enters the first section and displays the options for that section
-* `click on the (1) emoji again` - enters the first subsection of the first section and displays the options for it
-* `click on the (<-) emoji` - goes back to the previous section
-* `click on the (2) emoji` - enters the second section and displays the options for that section
-* `click on the (<-) emoji` - goes back to the previous section
+* `click on the (1) emoji` - enters the "Charting Commands" section
+* `click on the (1) emoji again` - enters the "Newchart" section
+* `click on the (<-) emoji` - goes back to the "Charting Commands" section
+* `click on the (2) emoji` - enters the "Openchart" section
+* `click on the (<-) emoji` - goes back to the "Charting Commands" section
 * `click on the (<-) emoji` - goes back to main menu
 
-And so on (easier to see it on discord than to explain it here)
+And so on... (easier to see it on discord than to explain it here)
 
-The interactive menu always works regardless of how old it gets so you can safely open a permanent help menu in a read-only channel and send your users there so they dont need to use it again and again.
+The interactive menu should alway work regardless of how old it gets so you can safely open a permanent help menu in a read-only channel and send your users there so they dont need to use it again and again in other channels.
 
 Multiple people can use the same help menu at the same time, but if you click on the reactions too fast some clicks will be ignored to prevent overload, so avoid fighting with each other over which page to display.
 
@@ -100,7 +103,7 @@ For starting, lets create a transit chart for a given date:
 
 * `.newchart 10/20/1995`
 
-The above command will generate a chart for October 20th 1995 at noon GMT. By default it expects a **MM/DD/YYYY** date but you can change it to **DD/MM/YYYY** by using the dateformat option explained in the [Settings](#settings) section.
+The above command will generate a chart for October 20th 1995 at noon GMT. By default it expects a **DD/MM/YYYY** date but you can change it to **MM/DD/YYYY** by using the dateformat option explained in the [Settings](#settings) section.
 
 Now if you want to give it a specific time of the day:
 
@@ -113,15 +116,17 @@ This will generate a chart for October 20th 1995 at 3:30pm GMT. In both cases no
 
 Now we have a chart for noon and another for 3:30pm both in the madrid timezone, and since we defined a location the charts will also display Houses!
 
-PS: You can also edit your commands, and Astrobot will edit its response accordingly, no need to flood your chat with new charts, how cool is that? :3
+Thats it for the basics of chart making and dont forget the commas between date, time and location (they are important). Now lets check some more advanced features below.
+
+PS: You can also edit your commands and Astrobot will edit its response accordingly, no need to flood your chat with new charts. Also, If you delete your command, Astrobot will also delete its response. how cool is that? :3
 
 #### Biwheels
 
-Now lets say we want to create a biwheel, all you have to do is add a ` + ` at the end of the command (with spaces around it), and give it a new set of data the same way as above:
+Now lets say we want to create a biwheel, all you have to do is add a ` + ` sign at the end of the command (with spaces around it), and then add a new set of data the same way as before:
 
 * `.newchart 10/20/1995, 15:30, madrid spain + 5/15/1992, 6:45am, london uk`
 
-Now we have a biwheel displaying both charts!
+Now we have a biwheel displaying two charts!
 
 #### Now
 
@@ -131,7 +136,7 @@ Besides the above Date, Time and Location method, you can also use the keyword `
 * `.newchart now, madrid spain`
 * `.newchart 10/20/1995, 15:30, madrid spain + now, madrid spain`
 
-This makes it easy to check the current transits, both in a single chart and in a biwheel with another chart. The `now` keyword can also be modified by adding or removing a number of days from it:
+This makes it easy to check the current transits, both in a single chart and in a biwheel with another chart. The `now` keyword can also be extended by adding or removing a number of days from it:
 
 * `.newchart now+1` - tomorrow
 * `.newchart now-1` - yesterday
@@ -199,7 +204,7 @@ This option lets you create solar return charts by specifying a year and optiona
 
 ##### --return2
 
-This option lets you create a return chart for any planet, not only the sun, by specifying a planet ID, a date and a search direction. Available search directions are `current`, `next` and `closest`. When used on biwheels, this option affects each chart independently. For example:
+This option lets you create a return chart for any planet, by specifying a planet ID, a search direction and a date-time-location separated by commas. Available search directions are `current`, `next` and `closest`. When used on biwheels, this option affects each chart independently. For example:
 
 * `.newchart john --return2=P1, next, now` - john's next lunar return starting from the current date and time
 * `.newchart jack --return2=P2, closest, 5/5/2025 lisbon portugal` - jack's mercury return closest to 5/5/2025 in lisbon portugal
@@ -283,7 +288,7 @@ This option lets you turn a biwheel into a composite chart using the midpoint co
 This option lets you load a set of options from a preset. There are two built-in presets: `default` and `original`. When using biwheels, this option can be set separately for both charts. For example:
 
 * `.newchart jack --preset=default` - show this chart using the default settings
-* `.newchart jack --preset=original` - show this chart using the same settings the chart was saved with
+* `.newchart jack --preset=original` - show this chart in its original state, using the same settings it was saved with
 * `.newchart jack --preset=myPreset` - show this chart using a custom preset
 * `.newchart jill --preset=myPreset + jack --preset=original` - show jill's chart with a custom preset in a biwheel with jack's chart in its original state
 
@@ -297,7 +302,7 @@ This option lets you view more details about the chart or charts. When viewing o
 
 ### Openchart
 
-This command loads a saved chart in its original state, exactly as it was when it was saved. It is essentially a shortcut for `--preset=original` but it can only open saved charts and doesnt support additional options. For example:
+This command loads a saved chart in its original state, exactly as it was when it was saved. It is essentially a shortcut for `--preset=original`, it can only open saved charts and doesnt support additional options. For example:
 
 * `.openchart daniel` - show daniel's chart in its original state
 
@@ -346,7 +351,7 @@ Toggle your chart's privacy:
 
 If this chart is private, change who can use it:
 
-* `.editchart mychart --share=@myfriend` - share or unshare this chart with a friend
+* `.editchart mychart --share=@myfriend` - share this chart with another person or unshare it if its already shared with this person
 * `.editchart mychart --share=none` - unshare this chart with everyone
 
 ### Deletechart
@@ -391,7 +396,7 @@ This command shows you information about a specific object ID, its names, type a
 
 * `.objectinfo P5` - show information about object P5 (jupiter)
 
-More information about common object IDs check the [Planets](#planets) section
+More information about common object IDs can be found in the [Planets](#planets) section
 
 ### About
 
@@ -401,13 +406,13 @@ This command lets you obtain information about certain topics and components use
 
 #### About Glyphs
 
-This option creates an image showing a preview and a description of every glyph and symbol that Astrobot uses:
+This option creates an image showing a preview and a description of every glyph and symbol that Astrobot uses including planets, asteroids and more:
 
 * `.about glyphs` - display all glyphs
 
 #### About Aspects
 
-This option creates an image showing a preview of every aspect supported by Astrobot:
+This option creates an image showing a preview and the degrees of distance of every aspect supported by Astrobot:
 
 * `.about aspects` - display all aspects
 
@@ -444,19 +449,19 @@ Or check the list of planets in the [Planets](#planets) section.
 
 ### Settings
 
-This command lets you configure your preferred default settings for all your charts. These settings are applied to all new charts as well as saved charts unless overriden by chart options or when using the `.openchart` command. Settings are also divided into sections for easier management.
+This command lets you configure your preferred default settings for all your charts. These settings are applied to all charts created using the `.newchart` command, including saved charts unless overriden by chart options or presets. Settings are divided into sections for easier management.
 
 #### Settings Sections
 
-The following sections are available to display your current settings. Each section also includes instructions for how to edit it.
+The following sections are available to display your current settings. Each section also displays instructions for how to edit/configure it.
 
 * `.settings planets` - display your currently enabled planets as well as their aspect points settings
-* `.settings aspects` - display your currently enabled aspects
+* `.settings aspects` - display your currently enabled aspects as well as available aspects to chose from
 * `.settings houses` - display your current preferred house system as well as available house systems to chose from
 * `.settings zodiac` - display your current preferred zodiac as well as available zodiacs to chose from
 * `.settings themes` - display your current chart theme as well as available themes to chose from
 * `.settings orbs` - display your current orbs set as well as available sets to chose from
-* `.settings dateformat` - display your current preferred date format
+* `.settings dateformat` - display your current preferred date format (DD/MM/YYYY or MM/DD/YYYY)
 * `.settings coordinates` - display your current preferred coordinate system
 * `.settings presets` - display your saved presets
 
@@ -534,9 +539,246 @@ Manage your saved presets. Additionally a built-in `default` preset is available
 
 See [Prefix](#prefix)
 
-
 ## Additional Information
 
-Here you can see additional information about Astrobot including how its planet ID system works, all available house systems, zodiacs, aspects and more.
+More information about Astrobot, including how its planet ID system works, all available house systems, zodiacs, aspects and more.
 
 ### Planets
+
+Astrobot uses an ID system due to the sheer amount of planets and objects it supports.
+
+#### Object Types
+
+Each planet and object has a unique ID starting with an object type represented by a letter:
+
+| Object Type | Descripton |
+|---|---|
+| P | Planets and special objects |
+| A | Asteroids |
+| S | Stars |
+| H | Hypothetical Planets |
+| C | Comets |
+| L | Arabic parts/lots |
+| T | Artificial Satellites |
+
+Asteroids and Artificial Satellites use the same numbering system they are commonly known to use (MPC Designation for Asteroids, SATCAT number for Satellites). Other object types do not follow any known numbering system and are instead organized either alphabetically, by importance, on a "first comes" basis or by any combination of those.
+
+#### Common Objects
+
+Some of the most common objects IDs are listed below. This list can also be found using the `.about planets` command.
+
+| ID | Object |
+|---|---|
+| P0 | Sun |
+| P1 | Moon |
+| P2 | Mercury |
+| P3 | Venus |
+| P4 | Mars |
+| P5 | Jupiter |
+| P6 | Saturn |
+| P7 | Uranus |
+| P8 | Neptune |
+| P9 | Pluto |
+| P10 | Mean Ascending (North) Node |
+| P11 | True Ascending (North) Node |
+| P23 | Mean Descending (South) Node |
+| P24 | True Descending (South) Node |
+| P14 | Earth |
+| P12 | Mean Lilith |
+| P13 | True Lilith |
+| P21 | Natural Lilith |
+| A1 | Ceres |
+| A2 | Pallas |
+| A3 | Juno |
+| A4 | Vesta |
+| A2060 | Chiron |
+| C1 | Comet Halley |
+| H1 | Cupido |
+| H2 | Hades |
+| H3 | Kronos |
+| H4 | Apollon |
+| H5 | Admetos |
+| H6 | Vulkanus |
+| H7 | Poseidon |
+| L118 | Part of Fortune |
+| L119 | Part of Spirit |
+| S3071 | Aldebaran |
+| S1351 | Regulus |
+| S3099 | Sirius |
+| S1224 | Vega |
+| S2665 | Spica |
+
+To find the ID of a specific object, check out the **[Findobject](#findobject)** command.
+
+### Houses
+
+Astrobot supports many different House Systems listed below. The list can also be found using the `.about houses` command.
+
+| ID | House System |
+|---|---|
+| 1 | Alcabitius |
+| 2 | APC |
+| 3 | Axial Rotation / Meridian / Zariel |
+| 4 | Azimuthal / Horizontal |
+| 5 | Campanus |
+| 6 | Carter / Poli-Equatorial |
+| 7 | Equal (1st House = Ascendant) |
+| 8 | Equal (10th House = Midheaven) |
+| 9 | Equal (1st House = 0° Aries) |
+| 10 | Gauquelin Sectors |
+| 11 | Sunshine / Makransky (Treindl) |
+| 12 | Sunshine / Makransky (Makransky) |
+| 13 | Koch |
+| 14 | Krusinski / Pisa / Goelzer |
+| 15 | Morinus |
+| 16 | Placidus |
+| 17 | Polich / Page / Topocentric |
+| 18 | Porphyry |
+| 19 | Pullen SD / Neo-Porphyry |
+| 20 | Pullen SR |
+| 21 | Regiomontanus |
+| 22 | Sripati |
+| 23 | Vehlow Equal |
+| 24 | Whole Sign |
+| none | none (disable houses) |
+
+### Zodiacs
+
+Astrobot suports many types of zodiacs, including Tropical, Sidereal and Draconic. Sidereal zodiacs also have many different calculation methods or "Ayanamsas" to chose from. The list below can also be found using the `.about zodiacs` command.
+
+| ID | Zodiac / Ayanamsa |
+|---|---|
+| T | Tropical |
+| D1 | Draconic (True Node) |
+| D2 | Draconic (Mean Node) |
+| S1 | Fagan / Bradley |
+| S2 | Lahiri |
+| S3 | De Luce |
+| S4 | Raman |
+| S5 | Usha / Shashi |
+| S6 | Krishnamurti |
+| S7 | Djwhal Khul |
+| S8 | Yukteshwar |
+| S9 | J.N. Bhasin |
+| S10 | Babylonian / Kugler 1 |
+| S11 | Babylonian / Kugler 2 |
+| S12 | Babylonian / Kugler 3 |
+| S13 | Babylonian / Huber |
+| S14 | Babylonian / Eta Piscium |
+| S15 | Babylonian / Aldebaran at 15° Taurus |
+| S16 | Hipparchos |
+| S17 | Sassanian |
+| S18 | Galactic Center at 0° Sagittarius |
+| S19 | J2000 |
+| S20 | J1900 |
+| S21 | B1950 |
+| S22 | Suryasiddhanta |
+| S23 | Suryasiddhanta (mean Sun) |
+| S24 | Aryabhata |
+| S25 | Aryabhata (mean Sun) |
+| S26 | SS Revati |
+| S27 | SS Citra |
+| S28 | True Citra |
+| S29 | True Revati |
+| S30 | True Pushya (PVR Narasimha Rao) |
+| S31 | Galactic Center (Gil Brand) |
+| S32 | Galactic Equator (IAU1958) |
+| S33 | Galactic Equator |
+| S34 | Galactic Equator mid-Mula |
+| S35 | Skydram (Mardyks) |
+| S36 | True Mula (Chandra Hari) |
+| S37 | Dhruva / Galactic Center / Mula (Wilhelm) |
+| S38 | Aryabhata 522 |
+| S39 | Babylonian / Britton |
+| S40 | Vedic / Sheoran |
+| S41 | Cochrane / Galactic Center at 0° Capricorn |
+| S42 | Galactic Equator (Fiorenza) |
+| S43 | Vettius Valens |
+| S44 | Sheratan at 2°15' Aries |
+| S45 | Vasilis Kanatas |
+
+### Aspects
+
+Astrobot supports many different aspects to chose from. The list below can also be found using the `.about aspects` command, which also include a preview of its glyphs and how they look in a chart.
+
+| Aspect | Distance (degrees) |
+|---|---|
+| conjunction | 0 |
+| opposition | 180 |
+| trine | 120 |
+| square | 90 |
+| quintile | 72 |
+| bi-quintile | 144 |
+| sextile | 60 |
+| septile | 51.42857142857143 |
+| bi-septile | 102.8571428571429 |
+| tri-septile | 154.2857142857143 |
+| semi-square | 45 |
+| sesqui-square | 135 |
+| novile | 40 |
+| bi-novile | 80 |
+| quadri-novile | 160 |
+| decile | 36 |
+| tri-decile | 108 |
+| undecile | 32.72727272727273 |
+| bi-undecile | 65.45454545454545 |
+| tri-undecile | 98.18181818181819 |
+| quadri-undecile | 130.9090909090909 |
+| quinque-undecile | 163.63636363636363 |
+| semi-sextile | 30 |
+| quincunx | 150 |
+| tredecile | 27.69230769230769 |
+| bi-tredecile | 55.38461538461538 |
+| tri-tredecile | 83.07692307692308 |
+| quadri-tredecile | 110.7692307692308 |
+| quinque-tredecile | 138.4615384615385 |
+| sexa-tredecile | 166.1538461538462 |
+| semi-septile | 25.71428571428571 |
+| sesqui-septile | 77.14285714285714 |
+| sester-septile | 128.5714285714286 |
+| quindecile | 24 |
+| bi-quindecile | 48 |
+| quadri-quindecile | 96 |
+| septua-quindecile | 168 |
+| quarti-square | 22.5 |
+| tri-quarti-square | 67.5 |
+| quinque-quarti-square | 112.5 |
+| septua-quarti-square | 157.5 |
+| semi-novile | 20 |
+| quinque-semi-novile | 100 |
+| septua-semi-novile | 140 |
+| vigintile | 18 |
+| tri-vigintile | 54 |
+| septua-vigintile | 126 |
+| nona-vigintile | 126 |
+| quarti-sextile | 15 |
+| squile | 75 |
+| squine | 105 |
+| undeca-quarti-sextile | 165 |
+
+## Premium
+
+Astrobot is and will always be 100% free without limitations, but in order to help with development and hosting costs, it offers a few "premium" features you can obtain by becoming a patron. Once you've pledged, send a DM to `Tim#2373` to receive instructions for designing and receiving your premium features.
+
+[Support Astrobot on Patreon](https://patreon.com/timotejroiko)
+
+### Custom Orbs ($6+)
+
+Astrobot includes 3 free orb sets to chose from. Becoming a patron allows you to create your own orbs set with custom orb values for all aspects. Orb values can be defined on a per-aspect basis or a per-planet basis.
+
+### Custom Theme ($6+)
+
+Astrobot includes 3 free chart themes for everyone to chose from. Becoming a patron allows you to design your own custom theme! Custom themes are extremely customizable and let you change the colors of almost everything in the chart. Here are a few examples of custom themes created by our lovely supporters:
+
+![custom theme 1](theme1.png) ![custom theme 2](theme2.png) ![custom theme 3](theme3.png)
+
+Custom themes are personal and can only be used by the person who owns them, but you can gift a custom theme to someone else.
+
+### Custom Theme for Servers ($15+)
+
+Spice up your discord server with a server-wide custom theme! This feature lets you design a custom theme and define it as the default theme for all charts made in your server.
+
+Individual users can still override it or turn it off if they prefer a different theme.
+
+
+[![top.gg widget](https://top.gg/api/widget/344272098488877057.svg)](https://top.gg/bot/344272098488877057)
