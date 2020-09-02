@@ -12,9 +12,8 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 * Custom themes and custom orb sets
 * Extremely customizable
 
-**To add Astrobot to your Discord server click here -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)**
-
-**If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)**
+**Add Astrobot to your Discord server! -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)**  
+**If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)**  
 
 ![preview](preview.png)
 
