@@ -12,9 +12,9 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 * Custom themes and custom orb sets
 * Extremely customizable
 
-To add Astrobot to your Discord server click here -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)
+**To add Astrobot to your Discord server click here -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)**
 
-If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)
+**If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)**
 
 ![preview](preview.png)
 
@@ -42,6 +42,7 @@ If you need any help join our support server -> [Join Astro Dev](https://discord
 	* **[Zodiacs](#zodiacs)**
 	* **[Aspects](#aspects)**
 * **[Donations and Premium Features](#premium)**
+* **[About Astrobot](#about-astrobot)**
 
 ## Getting Started
 
@@ -101,30 +102,30 @@ This command lets you create a variety of charts and supports an extensive amoun
 
 For starting, lets create a transit chart for a given date:
 
-* `.newchart 10/20/1995`
+* `.newchart 20/10/1995`
 
 The above command will generate a chart for October 20th 1995 at noon GMT. By default it expects a **DD/MM/YYYY** date but you can change it to **MM/DD/YYYY** by using the dateformat option explained in the [Settings](#settings) section.
 
 Now if you want to give it a specific time of the day:
 
-* `.newchart 10/20/1995, 15:30` or `.newchart 10/20/1995, 3:30pm`
+* `.newchart 20/10/1995, 15:30` or `.newchart 20/10/1995, 3:30pm`
 
-This will generate a chart for October 20th 1995 at 3:30pm GMT. In both cases no houses will be shown because the chart lacks a location. So lets give it one:
+This will generate a chart for October 20th 1995 at 3:30pm GMT. Both 12h and 24h time formats are supported. In both cases no houses will be shown because the chart lacks a location, so lets give it one:
 
-* `.newchart 10/20/1995, madrid spain`
-* `.newchart 10/20/1995, 15:30, madrid spain`
+* `.newchart 20/10/1995, madrid spain`
+* `.newchart 20/10/1995, 15:30, madrid spain`
 
 Now we have a chart for noon and another for 3:30pm both in the madrid timezone, and since we defined a location the charts will also display Houses!
 
 Thats it for the basics of chart making and dont forget the commas between date, time and location (they are important). Now lets check some more advanced features below.
 
-PS: You can also edit your commands and Astrobot will edit its response accordingly, no need to flood your chat with new charts. Also, If you delete your command, Astrobot will also delete its response. how cool is that? :3
+PS: You can also edit your commands and Astrobot will edit its response accordingly, no need to flood your chat with new charts. And if you delete your command, Astrobot will also delete its response. how cool is that? :3
 
 #### Biwheels
 
 Now lets say we want to create a biwheel, all you have to do is add a ` + ` sign at the end of the command (with spaces around it), and then add a new set of data the same way as before:
 
-* `.newchart 10/20/1995, 15:30, madrid spain + 5/15/1992, 6:45am, london uk`
+* `.newchart 20/10/1995, 15:30, madrid spain + 15/5/1992, 6:45am, london uk`
 
 Now we have a biwheel displaying two charts!
 
@@ -134,7 +135,7 @@ Besides the above Date, Time and Location method, you can also use the keyword `
 
 * `.newchart now`
 * `.newchart now, madrid spain`
-* `.newchart 10/20/1995, 15:30, madrid spain + now, madrid spain`
+* `.newchart 20/10/1995, 15:30, madrid spain + now, madrid spain`
 
 This makes it easy to check the current transits, both in a single chart and in a biwheel with another chart. The `now` keyword can also be extended by adding or removing a number of days from it:
 
@@ -758,27 +759,32 @@ Astrobot supports many different aspects to chose from. The list below can also 
 
 ## Premium
 
-Astrobot is and will always be 100% free without limitations, but in order to help with development and hosting costs, it offers a few "premium" features you can obtain by becoming a patron. Once you've pledged, send a DM to `Tim#2373` to receive instructions for designing and receiving your premium features.
+Astrobot is and will always be 100% free without limitations, but in order to help with development and maintenance costs, it offers a few "premium" features you can obtain by becoming a patron. Once you've pledged, send a DM to `Tim#2373` to receive instructions for receiving your premium features.
 
 [Support Astrobot on Patreon](https://patreon.com/timotejroiko)
 
-### Custom Orbs ($6+)
+### Custom Orbs ($3+)
 
-Astrobot includes 3 free orb sets to chose from. Becoming a patron allows you to create your own orbs set with custom orb values for all aspects. Orb values can be defined on a per-aspect basis or a per-planet basis.
+Astrobot includes 3 free orb sets to chose from. Becoming a $3+ patron lets you create your own custom orbs set with custom orb values for all aspects. Orb values can be defined on a per-aspect or a per-planet basis. Custom orbs are personal and can only be used by the person who owns them, but you can gift custom orbs to someone else.
 
 ### Custom Theme ($6+)
 
-Astrobot includes 3 free chart themes for everyone to chose from. Becoming a patron allows you to design your own custom theme! Custom themes are extremely customizable and let you change the colors of almost everything in the chart. Here are a few examples of custom themes created by our lovely supporters:
+Astrobot includes 3 free chart themes for everyone to chose from. Becoming a $6+ patron allows you to design your own custom theme! Custom themes are extremely customizable and let you change the colors of almost everything in the chart. Here are a few examples of custom themes created by our lovely supporters:
 
 ![custom theme 1](theme1.png) ![custom theme 2](theme2.png) ![custom theme 3](theme3.png)
 
-Custom themes are personal and can only be used by the person who owns them, but you can gift a custom theme to someone else.
+Custom themes are personal and can only be used by the person who owns them, but you can gift custom themes to someone else.
 
-### Custom Theme for Servers ($15+)
+### Custom Theme for Servers ($12+)
 
-Spice up your discord server with a server-wide custom theme! This feature lets you design a custom theme and define it as the default theme for all charts made in your server.
+Spice up your discord server with a server-wide custom theme! Becoming a $12+ patron lets you define a custom theme for an entire server. Server-wide themes are applied to all charts created and opened in it but individual users can still override it and/or turn it off if they prefer a different theme.
 
-Individual users can still override it or turn it off if they prefer a different theme.
+## About Astrobot
 
+Astrobot is an Astrology Discord bot made with love by `Tim#2373`
+
+Check out my other projects: [https://github.com/timotejroiko](https://github.com/timotejroiko)  
+Join me on Discord: [https://discord.gg/BpeedKh](https://discord.gg/BpeedKh)  
+Support me on Patreon: [https://patreon.com/timotejroiko](https://patreon.com/timotejroiko)  
 
 [![top.gg widget](https://top.gg/api/widget/344272098488877057.svg)](https://top.gg/bot/344272098488877057)
