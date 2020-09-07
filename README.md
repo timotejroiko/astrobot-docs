@@ -781,9 +781,9 @@ Astrobot includes 3 free chart themes for everyone to chose from. Becoming a $6+
 
 Custom themes are personal and can only be used by the person who owns them, but you can gift custom themes to someone else.
 
-### Custom Theme for Servers ($12+)
+### Custom Theme for Servers ($15+)
 
-Spice up your discord server with a server-wide custom theme! Becoming a $12+ patron lets you define a custom theme for an entire server. Server-wide themes are applied to all charts created and opened in the server but individual users can still override it and/or turn it off if they prefer a different theme.
+Spice up your discord server with a server-wide custom theme! Becoming a $15+ patron lets you define a custom theme for an entire server. Server-wide themes are applied to all charts created and opened in the server but individual users can still override it and/or turn it off if they prefer a different theme.
 
 ## About Astrobot
 
