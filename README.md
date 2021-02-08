@@ -340,19 +340,19 @@ This command lets you view information about one of your saved charts as well as
 
 * `.editchart john` - view more information about john's chart
 
-##### --rename
+#### --rename
 
 Change the name of your saved chart:
 
 * `.editchart john --rename=valentine` - change your chart's name to `valentine`
 
-##### --private
+#### --private
 
 Toggles your chart's privacy setting. Becomes private if its public or becomes public if its private.
 
 * `.editchart valentine --private` - toggle this chart's privacy setting
 
-##### --share
+#### --share
 
 If this chart is private, change who can use it:
 
@@ -387,7 +387,7 @@ This command lets you search for objects by name and discover their IDs. If you 
 
 * `.findobject eris` - show all planets, stars and objects whose names contain `eris`
 
-##### --type
+#### --type
 
 Limit the search results to specific types. For example:
 
