@@ -769,21 +769,21 @@ Astrobot is and will always be 100% free without limitations, but in order to he
 
 Thank you very much for all your love and support! <3
 
-### Custom Orbs ($3+)
+### Custom Orbs (€3+)
 
-Astrobot includes 3 free orb sets to chose from. Becoming a $3+ patron lets you create your own custom orbs set with custom orb values for all aspects. Orb values can be defined on a per-aspect or a per-planet basis. Custom orbs are personal and can only be used by the person who owns them, but you can gift custom orbs to someone else.
+Astrobot includes 3 free orb sets to chose from. Becoming a €3+ patron lets you create your own custom orbs set with custom orb values for all aspects. Orb values can be defined on a per-aspect or a per-planet basis. Custom orbs are personal and can only be used by the person who owns them, but you can gift custom orbs to someone else.
 
-### Custom Theme ($6+)
+### Custom Theme (€6+)
 
-Astrobot includes 3 free chart themes for everyone to chose from. Becoming a $6+ patron allows you to design your own custom theme! Custom themes are extremely customizable and let you change the colors of almost everything in the chart. Here are a few examples of custom themes created by our lovely supporters:
+Astrobot includes 3 free chart themes for everyone to chose from. Becoming a €6+ patron allows you to design your own custom theme! Custom themes are extremely customizable and let you change the colors of almost everything in the chart. Here are a few examples of custom themes created by our lovely supporters:
 
 ![custom theme 1](theme1.png) ![custom theme 2](theme2.png) ![custom theme 3](theme3.png)
 
 Custom themes are personal and can only be used by the person who owns them, but you can gift custom themes to someone else.
 
-### Custom Theme for Servers ($15+)
+### Custom Theme for Servers (€12+)
 
-Spice up your discord server with a server-wide custom theme! Becoming a $15+ patron lets you define a custom theme for an entire server. Server-wide themes are applied to all charts created and opened in the server but individual users can still override it and/or turn it off if they prefer a different theme.
+Spice up your discord server with a server-wide custom theme! Becoming a €12+ patron lets you define a custom theme for an entire server. Server-wide themes are applied to all charts created and opened in the server but individual users can still override it and/or turn it off if they prefer a different theme.
 
 ## About Astrobot
 
