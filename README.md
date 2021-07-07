@@ -15,7 +15,7 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 **Add Astrobot to your Discord server! -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)**  
 **If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)**  
 
-![preview](https://github.com/timotejroiko/astrobot-docs/blob/master/preview.png)
+![preview](https://github.com/timotejroiko/astrobot-docs/blob/master/preview.png?raw=true)
 
 ## Index
 
@@ -777,7 +777,7 @@ Astrobot includes 3 free orb sets to chose from. Becoming a €3+ patron lets yo
 
 Astrobot includes 3 free chart themes for everyone to chose from. Becoming a €6+ patron allows you to design your own custom theme! Custom themes are extremely customizable and let you change the colors of almost everything in the chart. Here are a few examples of custom themes created by our lovely supporters:
 
-![custom theme 1](https://github.com/timotejroiko/astrobot-docs/blob/master/theme1.png) ![custom theme 2](https://github.com/timotejroiko/astrobot-docs/blob/master/theme2.png) ![custom theme 3](https://github.com/timotejroiko/astrobot-docs/blob/master/theme3.png)
+![custom theme 1](https://github.com/timotejroiko/astrobot-docs/blob/master/theme1.png?raw=true) ![custom theme 2](https://github.com/timotejroiko/astrobot-docs/blob/master/theme2.png?raw=true) ![custom theme 3](https://github.com/timotejroiko/astrobot-docs/blob/master/theme3.png?raw=true)
 
 Custom themes are personal and can only be used by the person who owns them, but you can gift custom themes to someone else.
 
