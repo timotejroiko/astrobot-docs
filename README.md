@@ -78,31 +78,31 @@ Kicking Astrobot from your server also resets its prefix.
 
 ### Help
 
-The help command opens an interactive menu that includes almost everything on this page in an acessible way. It divides the content in sections and pages that can be navigated by clicking on the emoji reactions that show up at the bottom.
+The help command opens an interactive menu that includes almost everything on this page in an acessible way. It divides the content in sections and pages that can be navigated by clicking on the buttons that show up at the bottom.
 
 Examples:
 
 * `.help` - shows the interactive help menu and displays available options
-* `click on the (1) emoji` - enters the "Charting Commands" section
-* `click on the (1) emoji again` - enters the "Newchart" section
-* `click on the (<-) emoji` - goes back to the "Charting Commands" section
-* `click on the (2) emoji` - enters the "Openchart" section
-* `click on the (<-) emoji` - goes back to the "Charting Commands" section
-* `click on the (<-) emoji again` - goes back to main menu
+* `click on the "Charting Commands" button` - enters the "Charting Commands" section
+* `click on the "Newchart" button` - enters the "Newchart" section
+* `click on the "Back" button` - goes back to the "Charting Commands" section
+* `click on the "Openchart" button` - enters the "Openchart" section
+* `click on the "Back" button` - goes back to the "Charting Commands" section
+* `click on the "Back" button again` - goes back to main menu
 
-And so on... (easier to see it on discord than to explain it here)
+And so on... (easier to see it than to explain it here)
 
 The interactive menu should always work regardless of how old it gets so you can safely open a permanent help menu in a read-only channel and send your users there so they dont need to use it again and again in other channels.
 
-Multiple people can use the same help menu at the same time, but if you click on the reactions too fast some clicks will be ignored to prevent overload.
+Multiple people can use the same help menu at the same time.
 
 ## Charting Commands
 
-These commands are used to create a variety of charts and are the core feature of Astrobot.
+These commands are used to create and manage charts, and are the core feature of Astrobot.
 
 ### Newchart
 
-This command lets you create a variety of charts and supports an extensive amount of customization options including biwheels, solar returns, progressions, composites and more!
+This command lets you create a variety of astrological charts and supports an extensive amount of customization options including biwheels, solar returns, progressions, composites and more!
 
 #### Single Charts
 
