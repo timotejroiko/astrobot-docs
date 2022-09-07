@@ -15,6 +15,8 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 **Add Astrobot to your Discord server! -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)**  
 **If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)**  
 
+# ⚠️ Astrobot is currently transitioning to slash commands therefore some parts of this guide are not up to date. Old prefix commands are not available anymore, and while definitive slash commands are not yet available, you can continue using legacy commands by using /command instead of the dot prefix, for example "/command newchart" instead of ".newchart".
+
 ![preview](https://github.com/timotejroiko/astrobot-docs/blob/master/preview.png?raw=true)
 
 ## Index
