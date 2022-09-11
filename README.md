@@ -23,7 +23,7 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 * **[Help](#help)**
 * **[Charting Commands](#charting-commands)**
 	* **[Newchart](#newchart)**
-		* **[Single Chart](#single-chart)**
+		* **[Single Charts](#single-charts)**
 		* **[Biwheels](#biwheels)**
 		* **[Now](#now)**
 		* **[Saved Charts](#saved-charts)**
