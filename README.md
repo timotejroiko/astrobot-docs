@@ -2,7 +2,7 @@
 
 A fully featured Astrology software for Discord! Astrobot can create a variety of astrological charts and supports a vast array of possibilities. Its features include:
 
-* Planets, Stars, Asteroids, Arabic Parts, Comets, Artificial Sattelites, and more
+* Planets, Stars, Asteroids, Arabic Parts, Comets, Artificial Satellites, and more
 * Tropical, Sidereal and Draconic zodiacs
 * Geocentric, Topocentric and Heliocentric
 * 20+ House Systems and 40+ Ayanamsas
