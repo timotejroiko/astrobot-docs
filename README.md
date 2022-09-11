@@ -62,7 +62,7 @@ The help command opens an interactive menu that includes almost everything on th
 
 Examples:
 
-* `/help` - shows the interactive help menu and displays available options
+* `/command help` - shows the interactive help menu and displays available options
 * `click on the "Charting Commands" button` - enters the "Charting Commands" section
 * `click on the "Newchart" button` - enters the "Newchart" section
 * `click on the "Back" button` - goes back to the "Charting Commands" section
@@ -266,7 +266,7 @@ These options let you disable or re-enable a planet's aspect points. Additionall
 
 This option lets you turn a biwheel into a composite chart using the midpoint composite method. For example:
 
-* `/commandnewchart jack + john --composite` - create a midpoint composite between jack and john
+* `/command newchart jack + john --composite` - create a midpoint composite between jack and john
 
 ##### --preset
 
