@@ -54,8 +54,6 @@ Astrobot can be quite complex to use at first, but once you get the hang of it i
 
 Astrobot's uses slash commands `/` and it also works in DMs.
 
-Also, if edit your commands Astrobot will edit its response accordingly, and if you delete your command, Astrobot will also delete its response. how cool is that? :3
-
 So lets get started with Astrobot's basic commands:
 
 ### Help
