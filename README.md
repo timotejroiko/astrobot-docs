@@ -15,9 +15,7 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 **Add Astrobot to your Discord server! -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)**  
 **If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)**  
 
-# ⚠️ Astrobot is currently transitioning to slash commands therefore some parts of this guide are not up to date. Old prefix commands are not available anymore, and while definitive slash commands are not yet available, you can continue using legacy commands by using /command instead of the dot prefix, for example "/command newchart" instead of ".newchart".
-
-![preview](https://github.com/timotejroiko/astrobot-docs/blob/master/preview.png?raw=true)
+# ⚠️ Astrobot is currently transitioning to slash commands. Old prefix commands are not available anymore, and while definitive slash commands are not yet available, you can continue using legacy commands by using `/command` instead of the dot (`.`) prefix, for example `/command newchart` instead of `.newchart`.
 
 ## Index
 
@@ -54,29 +52,11 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 
 Astrobot can be quite complex to use at first, but once you get the hang of it its quite easy!
 
-Astrobot's default prefix is `.` and it also works in DMs. You can customize Astrobot's prefix in your server with the prefix command explained below.
+Astrobot's uses slash commands `/` and it also works in DMs.
 
 Also, if edit your commands Astrobot will edit its response accordingly, and if you delete your command, Astrobot will also delete its response. how cool is that? :3
 
 So lets get started with Astrobot's basic commands:
-
-### Prefix
-
-Use this command to view and/or change Astrobot's prefix in your server. Only server owners can change the prefix.
-
-Examples:
-
-* `.prefix` - shows the current prefix
-* `.prefix !!` - changes the prefix to `!!`
-* `!!help` - use the new prefix
-
-If you ever forget your prefix, you can also use `@astrobot` as a prefix:
-
-* `@astrobot prefix` - shows the current prefix
-* `@astrobot prefix !!` - changes the current prefix to `!!`
-* `!!help` - use the new prefix
-
-Kicking Astrobot from your server also resets its prefix.
 
 ### Help
 
@@ -84,7 +64,7 @@ The help command opens an interactive menu that includes almost everything on th
 
 Examples:
 
-* `.help` - shows the interactive help menu and displays available options
+* `/help` - shows the interactive help menu and displays available options
 * `click on the "Charting Commands" button` - enters the "Charting Commands" section
 * `click on the "Newchart" button` - enters the "Newchart" section
 * `click on the "Back" button` - goes back to the "Charting Commands" section
@@ -110,18 +90,18 @@ This command lets you create a variety of astrological charts and supports an ex
 
 For starting, lets create a transit chart for a given date:
 
-* `.newchart 20/10/1995`
+* `/commmand newchart 20/10/1995`
 
 The above command will generate a chart for October 20th 1995 at noon UTC. By default it expects a **DD/MM/YYYY** date but you can change it to **MM/DD/YYYY** by using the dateformat option explained in the [Settings](#settings) section.
 
 Now if you want to give it a specific time of the day:
 
-* `.newchart 20/10/1995, 15:30` or `.newchart 20/10/1995, 3:30pm`
+* `/command newchart 20/10/1995, 15:30` or `/command newchart 20/10/1995, 3:30pm`
 
 This will generate a chart for October 20th 1995 at 3:30pm UTC. Both 12h and 24h time formats are supported. In both cases no houses will be shown because the chart lacks a location, so lets give it one:
 
-* `.newchart 20/10/1995, madrid spain`
-* `.newchart 20/10/1995, 15:30, madrid spain`
+* `/command newchart 20/10/1995, madrid spain`
+* `/command newchart 20/10/1995, 15:30, madrid spain`
 
 Now we have a chart for noon and another for 3:30pm both in the madrid timezone, and since we defined a location this time, these charts will also display Houses!
 
@@ -131,7 +111,7 @@ Thats it for the basics of chart making and dont forget the commas between date,
 
 Now lets say we want to create a biwheel, all you have to do is add a ` + ` sign at the end of the command (with spaces around it), and then add a new set of data the same way as before:
 
-* `.newchart 20/10/1995, 15:30, rome italy + 15/5/1992, 6:45am, london uk`
+* `/command newchart 20/10/1995, 15:30, rome italy + 15/5/1992, 6:45am, london uk`
 
 Now we have a biwheel displaying both charts!
 
@@ -139,15 +119,15 @@ Now we have a biwheel displaying both charts!
 
 Besides the above Date, Time and Location method, you can also use the keyword `now` to create a chart for the current date and time. For example:
 
-* `.newchart now`
-* `.newchart now, new york`
-* `.newchart 20/10/1995, 15:30, new york + now, new york`
+* `/command newchart now`
+* `/command newchart now, new york`
+* `/command newchart 20/10/1995, 15:30, new york + now, new york`
 
 This makes it easy to check the current transits, both in a single chart and in a biwheel with another chart. The `now` keyword can also be extended by adding or removing a number of days from it:
 
-* `.newchart now+1` - tomorrow
-* `.newchart now-1` - yesterday
-* `.newchart now+0.5` - 12 hours from now
+* `/command newchart now+1` - tomorrow
+* `/command newchart now-1` - yesterday
+* `/command newchart now+0.5` - 12 hours from now
 
 Note that there should be no spaces around the plus/minus signs in this case.
 
@@ -155,10 +135,10 @@ Note that there should be no spaces around the plus/minus signs in this case.
 
 Astrobot's chart saving system lets you save charts under a name of your choice, as explained in the [Savechart](#savechart) section. Once you have a saved chart, you can easily pull it up by name, for example:
 
-* `.newchart jack`
-* `.newchart john doe`
-* `.newchart john doe + now`
-* `.newchart john doe + jack`
+* `/command newchart jack`
+* `/command newchart john doe`
+* `/command newchart john doe + now`
+* `/command newchart john doe + jack`
 
 You can also load other people's charts, as long as they are public.
 
@@ -170,9 +150,9 @@ Additionally, there are multiple chart options that can be added to the command 
 
 These two options let you add and/or remove planets and objects from a chart. When used on biwheels, this option affects each chart independently. Additionally, the `--remove` option includes an `ALL` keyword to remove all planets. For example:
 
-* `.newchart now --add=A1,A2 --remove=A2060` - remove Chiron and add Ceres and Pallas
-* `.newchart jack --add=A1 + now --add=A1` - add Ceres to both charts
-* `.newchart now --remove=ALL --add=P0,P1` - remove everything exept Sun and Moon
+* `/command newchart now --add=A1,A2 --remove=A2060` - remove Chiron and add Ceres and Pallas
+* `/command newchart jack --add=A1 + now --add=A1` - add Ceres to both charts
+* `/command newchart now --remove=ALL --add=P0,P1` - remove everything exept Sun and Moon
 
 Because of the amount of planets and objects that Astrobot supports, it uses an ID system to identify them. To find out which planets and objects are available and how to find them and their respective IDs, check out the [Planets](#planets) section.
 
@@ -180,8 +160,8 @@ Because of the amount of planets and objects that Astrobot supports, it uses an 
 
 This option lets you specify which zodiac or ayanamsa should be used (tropical by default). When used on biwheels, this option affects each chart independently. For example:
 
-* `.newchart now --zodiac=D1` - use the draconic (true node) zodiac
-* `.newchart jack --zodiac=S1 + now --zodiac=S1` - use the fagan/bradley sidereal zodiac in both charts
+* `/command newchart now --zodiac=D1` - use the draconic (true node) zodiac
+* `/command newchart jack --zodiac=S1 + now --zodiac=S1` - use the fagan/bradley sidereal zodiac in both charts
 
 Check the available zodiacs and ayanamsas in the [Zodiacs](#zodiacs) section.
 
@@ -189,8 +169,8 @@ Check the available zodiacs and ayanamsas in the [Zodiacs](#zodiacs) section.
 
 This option lets you specify which house system should be used (placidus by default). When used on biwheels, this option affects each chart independently. For example:
 
-* `.newchart now --houses=13` - use the koch house system
-* `.newchart jack --houses=24 + now --houses=24` - use the whole signs house system for both charts
+* `/command newchart now --houses=13` - use the koch house system
+* `/command newchart jack --houses=24 + now --houses=24` - use the whole signs house system for both charts
 
 Check the available house systems in the [Houses](#houses) section.
 
@@ -198,65 +178,65 @@ Check the available house systems in the [Houses](#houses) section.
 
 This option lets you manually specify a timezone, which overrides any automatic timezone if applicable. A timezone can be specified by a TZData identifier or by a number of offset minutes. When used on biwheels, this option affects each chart independently. For example:
 
-* `.newchart 5/5/2015, 16:00 --timezone=America/New_York` - use the america/new_york timezone identifier
-* `.newchart 5/5/2015, 16:00 --timezone=+50 + 7/7/2016, 16:00 --timezone=-50` - use UTC+00:50 on the first chart and UTC-00:50 on the second chart
+* `/command newchart 5/5/2015, 16:00 --timezone=America/New_York` - use the america/new_york timezone identifier
+* `/command newchart 5/5/2015, 16:00 --timezone=+50 + 7/7/2016, 16:00 --timezone=-50` - use UTC+00:50 on the first chart and UTC-00:50 on the second chart
 
 ##### --return
 
 This option lets you create a solar return chart by specifying a year and optionally a location. When used on biwheels, this option affects each chart independently. For example:
 
-* `.newchart john --return=2021` - john's solar return for 2021 in his birth place
-* `.newchart john --return=2021, london uk` - john's solar return for 2021 in london
-* `.newchart john --return=2021, london uk + jack --return=2021, madrid spain` - biwheel john's solar return for 2021 in london and jack's solar return for 2021 in madrid
+* `/command newchart john --return=2021` - john's solar return for 2021 in his birth place
+* `/command newchart john --return=2021, london uk` - john's solar return for 2021 in london
+* `/command newchart john --return=2021, london uk + jack --return=2021, madrid spain` - biwheel john's solar return for 2021 in london and jack's solar return for 2021 in madrid
 
 ##### --return2
 
 This option lets you create a return chart for any planet, by specifying a planet ID, a search direction and a date-time-location separated by commas. Available search directions are `current`, `next` and `closest`. When used on biwheels, this option affects each chart independently. For example:
 
-* `.newchart john --return2=P1, next, now` - john's next lunar return starting from the current date and time
-* `.newchart jack --return2=P2, closest, 5/5/2025, lisbon portugal` - jack's mercury return closest to 5/5/2025 in lisbon portugal
-* `.newchart john --return2=P5, current, now + jack --return2=P5, current, now` - biwheel john's most recent jupiter return with jacks most recent jupiter return
+* `/command newchart john --return2=P1, next, now` - john's next lunar return starting from the current date and time
+* `/command newchart jack --return2=P2, closest, 5/5/2025, lisbon portugal` - jack's mercury return closest to 5/5/2025 in lisbon portugal
+* `/command newchart john --return2=P5, current, now + jack --return2=P5, current, now` - biwheel john's most recent jupiter return with jacks most recent jupiter return
 
 ##### --progression
 
 This option lets you create a progressed chart using the secondary progression method. When used on biwheels, this option affects each chart independently. For example:
 
-* `.newchart john --progression=1/1/2025` - john's secondary progressed chart for 1/1/2025
-* `.newchart john + john --progression=now` - john's birth chart in a biwheel with his current secondary progressed chart
+* `/command newchart john --progression=1/1/2025` - john's secondary progressed chart for 1/1/2025
+* `/command newchart john + john --progression=now` - john's birth chart in a biwheel with his current secondary progressed chart
 
 ##### --persona
 
 This option lets you create a "persona" chart for a specific planet. When used on biwheels, this option affects each chart independently. For example:
 
-* `.newchart john --persona=P5` - john's jupiter persona chart
-* `.newchart john --persona=P5 + john --persona=P6` - john's jupiter persona chart biwheeled with john's saturn persona chart
+* `/command newchart john --persona=P5` - john's jupiter persona chart
+* `/command newchart john --persona=P5 + john --persona=P6` - john's jupiter persona chart biwheeled with john's saturn persona chart
 
 ##### --design
 
 This option lets you create a "design" chart as seen in the Human Design System. When used on biwheels, this option affects each chart independently. For example:
 
-* `.newchart john --design` - john's design chart
-* `.newchart john + john --design` - john's birth chart in a biwheel which his design chart
+* `/command newchart john --design` - john's design chart
+* `/command newchart john + john --design` - john's birth chart in a biwheel which his design chart
 
 ##### --coordinates
 
 This option lets you set the chart's coordinate system between `Geocentric`, `Topocentric` and `Heliocentric`. When used on biwheels, this option affects each chart independently. For example:
 
-* `.newchart john --coordinates=heliocentric` - john's heliocentric chart
-* `.newchart john --coordinates=geocentric + john --coordinates=topocentric` - biwheel john's chart in geocentric and topocentric coordinates
+* `/command newchart john --coordinates=heliocentric` - john's heliocentric chart
+* `/command newchart john --coordinates=geocentric + john --coordinates=topocentric` - biwheel john's chart in geocentric and topocentric coordinates
 
 ##### --size
 
 This option lets you change the resolution of the resulting chart image as well as the scale of the fonts and gyphs on the chart. For example:
 
-* `.newchart now --size=2000` - set the chart resolution to 2000x2000 pixels
-* `.newchart jack + now --size=1500,120` - set the chart resolution to 1500x1500 pixels and the font scaling to 120%
+* `/command newchart now --size=2000` - set the chart resolution to 2000x2000 pixels
+* `/command newchart jack + now --size=1500,120` - set the chart resolution to 1500x1500 pixels and the font scaling to 120%
 
 ##### --theme
 
 This option lets you change the chart's color theme. There are three built-in themes: `classic`, `elements` and `rainbow`. For example:
 
-* `.newchart now --theme=classic` - use the classic theme for this chart
+* `/command newchart now --theme=classic` - use the classic theme for this chart
 
 Additionally, custom themes can be created as a premium feature, check the [Premium](#premium) section.
 
@@ -264,7 +244,7 @@ Additionally, custom themes can be created as a premium feature, check the [Prem
 
 This option lets you change the chart's orb values. There are three built-in orbs: `astrobot`, `astro.com` and `strict`. For example:
 
-* `.newchart now --orbs=strict`
+* `/command newchart now --orbs=strict`
 
 Additionally, custom orbs can be created as a premium feature, check the [Premium](#premium) section
 
@@ -272,7 +252,7 @@ Additionally, custom orbs can be created as a premium feature, check the [Premiu
 
 This option lets you define which aspects should be enabled in the chart. For example:
 
-* `.newchart now --aspects=trine,sextile,square` - show only trines, sextiles and squares
+* `/command newchart now --aspects=trine,sextile,square` - show only trines, sextiles and squares
 
 A full list of supported aspects can be found in the [Aspects](#aspects) section.
 
@@ -280,24 +260,24 @@ A full list of supported aspects can be found in the [Aspects](#aspects) section
 
 These options let you disable or re-enable a planet's aspect points. Additionally, they include an `ALL` keyword for selecting all planets. For example:
 
-* `.newchart now --disable=P0,P1,P2` - disable aspects for sun, moon and mercury
-* `.newchart jack + now --enable=A1` - re-enable aspects to Ceres if disabled
-* `.newchart john --disable=ALL --enable=P0,P1` - disable aspects for all planets except Sun and Moon
+* `/command newchart now --disable=P0,P1,P2` - disable aspects for sun, moon and mercury
+* `/command newchart jack + now --enable=A1` - re-enable aspects to Ceres if disabled
+* `/command newchart john --disable=ALL --enable=P0,P1` - disable aspects for all planets except Sun and Moon
 
 ##### --composite
 
 This option lets you turn a biwheel into a composite chart using the midpoint composite method. For example:
 
-* `.newchart jack + john --composite` - create a midpoint composite between jack and john
+* `/commandnewchart jack + john --composite` - create a midpoint composite between jack and john
 
 ##### --preset
 
 This option lets you load a set of options from a preset. There are two built-in presets: `default` and `original`. When using biwheels, this option can be set separately for both charts. For example:
 
-* `.newchart jack --preset=default` - show this chart using the default settings
-* `.newchart jack --preset=original` - show this chart in its original state, using the same settings it was saved with
-* `.newchart jack --preset=myPreset` - show this chart using a custom preset
-* `.newchart jill --preset=myPreset + jack --preset=original` - show jill's chart with a custom preset in a biwheel with jack's chart in its original state
+* `/command newchart jack --preset=default` - show this chart using the default settings
+* `/command newchart jack --preset=original` - show this chart in its original state, using the same settings it was saved with
+* `/command newchart jack --preset=myPreset` - show this chart using a custom preset
+* `/command newchart jill --preset=myPreset + jack --preset=original` - show jill's chart with a custom preset in a biwheel with jack's chart in its original state
 
 Check out the [Presets](#presets) section to learn how to create and manage your custom presets.
 
@@ -305,19 +285,19 @@ Check out the [Presets](#presets) section to learn how to create and manage your
 
 This option lets you view more details about the chart or charts. When viewing other people's charts, any personal information will be redacted. For example
 
-`.newchart john --chartinfo` - view more information about john's chart
+`/command newchart john --chartinfo` - view more information about john's chart
 
 ### Openchart
 
 This command loads a saved chart in its original state, exactly as it was when it was saved. It is essentially a shortcut for `--preset=original`, it can only open saved charts and doesnt support additional options. For example:
 
-* `.openchart daniel` - show daniel's chart in its original state
+* `/command openchart daniel` - show daniel's chart in its original state
 
 ### Savechart
 
 This command lets you save the last chart you created under a name of your choice. All names are case sensitive and must not include commas, double dashes nor slashes. Mentions will be converted to Discord IDs For example:
 
-* `.savechart jack` - save the last chart you created under the name `jack`
+* `/command savechart jack` - save the last chart you created under the name `jack`
 
 #### Savechart Options
 
@@ -327,57 +307,57 @@ A chart can be saved as public or private (all charts are public by default). Pr
 
 Save this chart as a private chart. Private charts can only be opened by their owners and the people the chart was shared with. For example:
 
-* `.savechart jack --private` - save this chart as private
-* `.savechart jack --private --share=@john` - save this chart as private and share it with a specific person
+* `/command savechart jack --private` - save this chart as private
+* `/command savechart jack --private --share=@john` - save this chart as private and share it with a specific person
 
 ##### --replace
 
 If you already have a saved chart with a given name and you want to replace it with a new one, you can use this option to overwrite it:
 
-* `.savechart jack --replace` - replace a previously saved chart with a new one
+* `/command savechart jack --replace` - replace a previously saved chart with a new one
 
 ### Editchart
 
 This command lets you view information about one of your saved charts as well as change its name and privacy settings. For example:
 
-* `.editchart john` - view more information about john's chart
+* `/command editchart john` - view more information about john's chart
 
 #### --rename
 
 Change the name of your saved chart:
 
-* `.editchart john --rename=valentine` - change your chart's name to `valentine`
+* `/command editchart john --rename=valentine` - change your chart's name to `valentine`
 
 #### --private
 
 Toggles your chart's privacy setting. Becomes private if its public or becomes public if its private.
 
-* `.editchart valentine --private` - toggle this chart's privacy setting
+* `/command editchart valentine --private` - toggle this chart's privacy setting
 
 #### --share
 
 If this chart is private, change who can use it:
 
-* `.editchart jack --share=@valentine` - share this chart with another person or unshare it if its already shared with this person
-* `.editchart jack --share=none` - unshare this chart with everyone
+* `/command editchart jack --share=@valentine` - share this chart with another person or unshare it if its already shared with this person
+* `/command editchart jack --share=none` - unshare this chart with everyone
 
 ### Deletechart
 
 This command lets you permanently delete a chart. You can only delete charts you own. For example:
 
-* `.deletechart jack` - permanently delete the chart `jack`
+* `/command deletechart jack` - permanently delete the chart `jack`
 
 ### Findchart
 
 This command lets you find a saved chart by name, including charts made by other people. If you find too many results, try searching for a more specific name. For example:
 
-* `.findchart john` - show all charts containing `john` in their names
+* `/command findchart john` - show all charts containing `john` in their names
 
 ### Mycharts
 
 This command lets you see all charts you have saved with your current discord account. For example:
 
-* `.mycharts` - show all the charts you own
+* `/command mycharts` - show all the charts you own
 
 ## Utility Commands
 
@@ -387,13 +367,13 @@ The following utility commands provide assistance with many things for example f
 
 This command lets you search for objects by name and discover their IDs. If you cant find the object you're looking for, try a more specific search term as well as any alternative names it may have. For example:
 
-* `.findobject eris` - show all planets, stars and objects whose names contain `eris`
+* `/command findobject eris` - show all planets, stars and objects whose names contain `eris`
 
 #### --type
 
 Limit the search results to specific types. For example:
 
-* `.findobject eris --type=A` - show only asteroids whose name contains `eris`
+* `/command findobject eris --type=A` - show only asteroids whose name contains `eris`
 
 More information about types can be found in the [Planets](#planets) section.
 
@@ -401,7 +381,7 @@ More information about types can be found in the [Planets](#planets) section.
 
 This command shows you information about a specific object ID, its names, type and a preview of how it appears in a chart. For example:
 
-* `.objectinfo P5` - show information about object P5 (jupiter)
+* `/command objectinfo P5` - show information about object P5 (jupiter)
 
 More information about common object IDs can be found in the [Planets](#planets) section
 
@@ -409,32 +389,32 @@ More information about common object IDs can be found in the [Planets](#planets)
 
 This command lets you obtain information about certain topics and components used by Astrobot such as glyphs, orbs, aspects and more.
 
-* `.about` - list components that offer additional information
+* `/command about` - list components that offer additional information
 
 #### About Glyphs
 
 This option creates an image showing a preview and a description of every glyph and symbol that Astrobot uses including planets, asteroids and more:
 
-* `.about glyphs` - display all planetary symbols and glyphs that Astrobot uses
+* `/command about glyphs` - display all planetary symbols and glyphs that Astrobot uses
 
 #### About Aspects
 
 This option creates an image showing a preview and the distance degrees of every aspect supported by Astrobot:
 
-* `.about aspects` - display all aspects that Astrobot uses
+* `/command about aspects` - display all aspects that Astrobot uses
 
 #### About orbs
 
 This option displays a list of available orb sets, as well as details about a specific orbs set:
 
-* `.about orbs` - display a list of available orb sets
-* `.about orbs astro.com` - describe the orb values of the `astro.com` orbs set
+* `/command about orbs` - display a list of available orb sets
+* `/command about orbs astro.com` - describe the orb values of the `astro.com` orbs set
 
 #### About Houses
 
 This option displays a list of available house systems in Astrobot:
 
-* `.about houses` - display a list of available house systems
+* `/command about houses` - display a list of available house systems
 
 Alternatively you can check the list of house systems in the [Houses](#houses) section.
 
@@ -442,7 +422,7 @@ Alternatively you can check the list of house systems in the [Houses](#houses) s
 
 This option displays a list of available zodiacs and ayanamsas in Astrobot:
 
-* `.about zodiacs` - display a list of available zodiacs
+* `/command about zodiacs` - display a list of available zodiacs
 
 Alternatively you can check the list of zodiacs and ayanamsas in the [Zodiacs](#zodiacs) section.
 
@@ -450,27 +430,27 @@ Alternatively you can check the list of zodiacs and ayanamsas in the [Zodiacs](#
 
 This option diplays a list of commonly used planets and their IDs:
 
-* `.about planets` - display a list of common planets
+* `/command about planets` - display a list of common planets
 
 Alternatively you can check the list of planets in the [Planets](#planets) section.
 
 ### Settings
 
-This command lets you configure your preferred default settings for all your charts. These settings are applied to all charts created using the `.newchart` command, including saved charts, unless overriden by chart options or presets. Settings are divided into sections for easier management.
+This command lets you configure your preferred default settings for all your charts. These settings are applied to all charts created using the `/command newchart` command, including saved charts, unless overriden by chart options or presets. Settings are divided into sections for easier management.
 
 #### Settings Sections
 
 The following sections are available to display your current settings. Each section also displays instructions for how to edit/configure it.
 
-* `.settings planets` - display your currently enabled planets as well as their aspect points
-* `.settings aspects` - display your currently enabled aspects as well as available aspects to chose from
-* `.settings houses` - display your preferred house system as well as available house systems to chose from
-* `.settings zodiac` - display your preferred zodiac as well as available zodiacs to chose from
-* `.settings themes` - display your current chart theme as well as available themes to chose from
-* `.settings orbs` - display your current orbs set as well as available sets to chose from
-* `.settings dateformat` - display your current preferred date format (DD/MM/YYYY or MM/DD/YYYY)
-* `.settings coordinates` - display your current preferred coordinate system
-* `.settings presets` - display your saved presets
+* `/command settings planets` - display your currently enabled planets as well as their aspect points
+* `/command settings aspects` - display your currently enabled aspects as well as available aspects to chose from
+* `/command settings houses` - display your preferred house system as well as available house systems to chose from
+* `/command settings zodiac` - display your preferred zodiac as well as available zodiacs to chose from
+* `/command settings themes` - display your current chart theme as well as available themes to chose from
+* `/command settings orbs` - display your current orbs set as well as available sets to chose from
+* `/command settings dateformat` - display your current preferred date format (DD/MM/YYYY or MM/DD/YYYY)
+* `/command settings coordinates` - display your current preferred coordinate system
+* `/command settings presets` - display your saved presets
 
 #### Settings Options
 
@@ -480,71 +460,67 @@ The following options are available to change your personal settings.
 
 Add and remove planets from your settings. For example:
 
-* `.settings --addplanets=A1,A2,A3` - add Ceres, Pallas and Juno to your settings
-* `.settings --removeplanets=P7,P8,P9` - remove Uranus, Neptune and Pluto from your settings
+* `/command settings --addplanets=A1,A2,A3` - add Ceres, Pallas and Juno to your settings
+* `/command settings --removeplanets=P7,P8,P9` - remove Uranus, Neptune and Pluto from your settings
 
 ##### --enableplanets & --disableplanets
 
 Disable and re-enable aspects points for your selected planets. All planets have their aspect points enabled by default. For example:
 
-* `.settings --disableplanets=A1,A2,A3` - disable aspect points to Ceres, Pallas and Juno
-* `.settings --enableplanets=A1,A2,A3` - re-enable previously disabled aspect points
+* `/command settings --disableplanets=A1,A2,A3` - disable aspect points to Ceres, Pallas and Juno
+* `/command settings --enableplanets=A1,A2,A3` - re-enable previously disabled aspect points
 
 ##### --enableaspects & --disableaspects
 
 Enable and disable your preferred aspects. For example:
 
-* `.settings --enableaspects=conjunction,quincunx` - enable conjunctions and quincunxes
-* `.settings --disableaspects=sextile,opposition` - disable sextiles and oppositions
+* `/command settings --enableaspects=conjunction,quincunx` - enable conjunctions and quincunxes
+* `/command settings --disableaspects=sextile,opposition` - disable sextiles and oppositions
 
 ##### --houses
 
 Set your preferred house system. For example:
 
-* `.settings --houses=24` - set Whole Signs as your default house system
+* `/command settings --houses=24` - set Whole Signs as your default house system
 
 ##### --zodiac
 
 Set your preferred zodiac. For example:
 
-* `.settings --zodiac=S2` - set Lahiri as your default zodiac
+* `/command settings --zodiac=S2` - set Lahiri as your default zodiac
 
 ##### --theme
 
 Set your preferred chart theme. For example:
 
-* `.settings --theme=rainbow` - set rainbow as your default theme
+* `/command settings --theme=rainbow` - set rainbow as your default theme
 
 ##### --orbs
 
 Set your preferred orbs set
 
-* `.settings --orbs=strict` - set your default orbs to strict
+* `/command settings --orbs=strict` - set your default orbs to strict
 
 ##### --switchdateformat
 
 Switch your preferred date format between **DD/MM/YYYY** and **MM/DD/YYYY**. For example:
 
-* `.settings --switchdateformat` - switch to another date format
+* `/command settings --switchdateformat` - switch to another date format
 
 ##### --coordinates
 
 Set your preferred coordinates system. For example:
 
-* `.settings --coordinates=HELIOCENTRIC` - set Heliocentric as your default coordinates system
+* `/command settings --coordinates=HELIOCENTRIC` - set Heliocentric as your default coordinates system
 
 ##### --savepreset & --loadpreset & --deletepreset
 
 Manage your saved presets. Additionally a built-in `default` preset is available to reset all settings back to default. For example:
 
-* `.settings --savepreset=custom1` - save all your current settings as a preset named custom1
-* `.settings --loadpreset=custom1` - replace all your current settings with those contained in the custom1 preset
-* `.settings --deletepreset=custom1` - delete the custom1 preset
-* `.settings --loadpreset=default` - reset all settings back to default
-
-### Prefix
-
-See [Prefix](#prefix)
+* `/command settings --savepreset=custom1` - save all your current settings as a preset named custom1
+* `/command settings --loadpreset=custom1` - replace all your current settings with those contained in the custom1 preset
+* `/command settings --deletepreset=custom1` - delete the custom1 preset
+* `/command settings --loadpreset=default` - reset all settings back to default
 
 ## Additional Information
 
@@ -572,7 +548,7 @@ Asteroids and Artificial Satellites use the same numbering system they are commo
 
 #### Common Objects
 
-Some of the most common objects IDs are listed below. This list can also be found using the `.about planets` command.
+Some of the most common objects IDs are listed below. This list can also be found using the `/command about planets` command.
 
 | ID | Object |
 |---|---|
@@ -619,7 +595,7 @@ To find the ID of a specific object, check out the **[Findobject](#findobject)**
 
 ### Houses
 
-Astrobot supports many different House Systems listed below. The list can also be found using the `.about houses` command.
+Astrobot supports many different House Systems listed below. The list can also be found using the `/command about houses` command.
 
 | ID | House System |
 |---|---|
@@ -651,7 +627,7 @@ Astrobot supports many different House Systems listed below. The list can also b
 
 ### Zodiacs
 
-Astrobot suports many types of zodiacs, including Tropical, Sidereal and Draconic. Sidereal zodiacs also have many different calculation methods or "Ayanamsas" to chose from. The list below can also be found using the `.about zodiacs` command.
+Astrobot suports many types of zodiacs, including Tropical, Sidereal and Draconic. Sidereal zodiacs also have many different calculation methods or "Ayanamsas" to chose from. The list below can also be found using the `/command about zodiacs` command.
 
 | ID | Zodiac / Ayanamsa |
 |---|---|
@@ -706,7 +682,7 @@ Astrobot suports many types of zodiacs, including Tropical, Sidereal and Draconi
 
 ### Aspects
 
-Astrobot supports many different aspects to chose from. The list below can also be found using the `.about aspects` command, which also include a preview of its glyphs and how they look in a chart.
+Astrobot supports many different aspects to chose from. The list below can also be found using the `/command about aspects` command, which also include a preview of its glyphs and how they look in a chart.
 
 | Aspect | Distance (degrees) |
 |---|---|
