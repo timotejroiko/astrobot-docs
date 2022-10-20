@@ -13,7 +13,7 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 * Extremely customizable
 
 **Add Astrobot to your Discord server! -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&permissions=379968&scope=bot)**  
-**If you need any help join our support server -> [Join Astro Dev](https://discord.gg/BpeedKh)**  
+**If you need any help join our support server -> [Join Astro Dev](https://discord.gg/ZekGFgt2dt)**  
 
 # ⚠️ Astrobot is currently transitioning to slash commands. Old prefix commands are not available anymore, and while definitive slash commands are not yet available, you can continue using legacy commands by using `/command` instead of the dot (`.`) prefix, for example `/command newchart` instead of `.newchart`.
 
@@ -766,7 +766,7 @@ Spice up your discord server with a server-wide custom theme! Becoming a €12+ 
 Astrobot is an Astrology Discord bot made with love by `Tim#2373`
 
 Check out my other projects: [https://github.com/timotejroiko](https://github.com/timotejroiko)  
-Join me on Discord: [https://discord.gg/BpeedKh](https://discord.gg/BpeedKh)  
+Join me on Discord: [https://discord.gg/ZekGFgt2dt](https://discord.gg/ZekGFgt2dt)  
 Support me on Patreon: [https://patreon.com/timotejroiko](https://patreon.com/timotejroiko)  
 
 [![top.gg widget](https://top.gg/api/widget/344272098488877057.svg)](https://top.gg/bot/344272098488877057)
