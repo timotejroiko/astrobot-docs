@@ -12,7 +12,7 @@ A fully featured Astrology software for Discord! Astrobot can create a variety o
 * Custom themes and custom orb sets
 * Extremely customizable
 
-**Add Astrobot to your Discord server! -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&scope=applications.commands)**  
+**Add Astrobot to your Discord server! -> [Invite Astrobot](https://discord.com/oauth2/authorize?client_id=344272098488877057&scope=bot%20applications.commands)**  
 **If you need any help join our support server -> [Join Astro Dev](https://discord.gg/ZekGFgt2dt)**  
 
 # ⚠️ Astrobot is currently transitioning to slash commands. Old prefix commands are not available anymore, and while definitive slash commands are not yet available, you can continue using legacy commands by using `/command` instead of the dot (`.`) prefix, for example `/command newchart` instead of `.newchart`.

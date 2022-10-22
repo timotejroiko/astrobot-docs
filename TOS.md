@@ -12,7 +12,7 @@ By using Astrobot you automatically agree to the following terms and conditions:
 
 - You will not use Astrobot's features and commands to violate Discord's terms of service in any way or form.
 
-- you will not attempt to hack, break, dos/ddos, exploit, reverse engineer or steal any part of Astrobot's services, functions or commands.
+- You shall not attempt to hack, break, dos/ddos, exploit, reverse engineer or steal any part of Astrobot's services, functions or commands. You may however test Astrobot to find bugs, errors and potential security flaws and immediately report anything you find to Astrobot's developer.
 
 - you will not abuse Astrobot's storage system nor use it to propagate spam, hate speech, nsfw or other kinds of toxic content.
 
